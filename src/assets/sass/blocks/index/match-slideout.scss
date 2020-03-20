@@ -1,0 +1,119 @@
+.match__main-content {
+	width: 95%;
+	margin: 0 auto;
+	background: #F2F2F2;
+
+	&:nth-child(odd) {
+		background: #EFF3FC;
+	}
+}
+
+.match__info {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	// flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.match__player {
+	display: flex;
+	justify-content: space-between;
+}
+
+.match__team1-players {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 35%;
+	padding: 15px 20px;
+	background: #DDD;
+	border-radius: 10px;
+}
+
+.match__team2-players {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 35%;
+	padding: 15px 20px;
+	background: #DDD;
+	border-radius: 10px;
+}
+
+.match__maps {
+	width: 30%;
+	display: flex;
+	padding: 5px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.match__map-score {
+	width: 60%;
+	float: right;
+	text-align: center;
+	align-items: center;
+	margin: 0;
+	
+	// position: relative;
+
+	display: table;
+	
+
+	.map__score {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 10px;
+		font-weight: 600;
+		font-size: 15px;
+	}
+
+	.map__winner {
+		color: #2B7BFB;
+	}
+}
+
+.match__map {
+	height: 100%;
+	position: relative;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	padding: 10px;
+	overflow: hidden;
+	margin-top: 10px;
+	background: #fff;
+
+	.map__img {
+		margin-right: 10px;
+		position: absolute;
+		height: 100%;
+		width: 40%;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+}
+
+.map__team1-logo {
+	width: 33px;
+}
+
+.map__team2-logo {
+	width: 33px;
+}
+
+.player__adr {
+	margin-left: 20px;
+	b {
+		color: #2B7BFB;
+	}
+}
+
+.player__country {
+	width: 18px;
+	height: 12px;
+	margin-top: 10px;
+}
+

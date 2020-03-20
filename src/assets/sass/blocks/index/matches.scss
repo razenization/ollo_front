@@ -1,0 +1,169 @@
+.content {
+	margin-top: 60px;
+}
+
+.matches {
+	width: 100% !important;
+}
+
+.matches__container {
+	/* Rectangle 16 */
+	padding: 2% 0;
+	text-align: center;
+	width: 100% !important;
+
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 15px;
+
+}
+
+.matches__title {
+	margin-bottom: 1%;
+	font-size: 0.9rem;
+}
+
+.matches__timestamp {
+	color: #BEBEBE;
+}
+
+.match__wrapper {
+	// position: relative;
+	width: 95%;
+	margin: 0 auto 7px;
+	overflow: hidden;
+
+	border-radius: 20px;
+
+	&:nth-child(odd) {
+		background: #EFF3FC;
+	}
+
+	&:nth-child(even) {
+		background: #F2F2F2;
+	}
+}
+
+.match__link {
+	/* Rectangle 18 */
+	margin: 7px auto;
+	width: 95%;
+	height: 70px;
+	left: 164px;
+	top: 1015px;
+	display: flex;
+	overflow: hidden;
+	border-radius: 15px;
+	// background: #fff;
+	cursor: pointer;
+	
+	transition: opacity .1s linear;
+
+	&:hover {
+		// opacity: 0.9;
+	}
+}
+
+.match__league-photo {
+	width: 14%;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+
+	text-align: center;
+
+	img {
+		position: absolute;
+	    top: 0%;
+	    left: 0;
+	    margin: auto;
+		width: 150px;
+		border-radius: 20px 0 0 20px;
+	}
+}
+
+.match__main {
+	width: 55%;
+	height: 100%;
+	
+	font-weight: 600;
+
+	margin: 0 auto;
+	display: flex;
+	position: relative;
+	align-items: center;
+	overflow: visible;
+	justify-content: space-between;
+
+	.team1-img {
+		max-width: 60px;
+	}
+
+	.team2-img {
+		width: 60px;
+	}
+}
+
+.match__short-info {
+	&:before {
+		content: "VS";
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1;
+	    display: block;
+	    width: 60px;
+	    margin: 0 auto;
+	}
+}
+
+.match-date {
+	&:after {
+		content: "";
+	    display: inline-block;
+	    width: 5px;
+	    height: 5px;
+
+	    border-radius: 50%;
+	    margin-left: 3px;
+	    margin-bottom: 3px;
+
+	    background: #2B7BFB;
+	}
+}
+
+.match__extras {
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 30px;
+}
+
+.extra-link {
+	cursor: pointer;
+}
+
+.extra-img {
+	width: 20px;
+	
+	// transition: filter .06s linear;
+
+	&:hover {
+		filter: invert(0.67) sepia(1) saturate(5) hue-rotate(175deg);
+	}
+}
+
+.match__extras-nolive {
+	width: 15%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	// margin-right: 30px;
+
+	.extra-img {
+		margin: 0 auto;
+		width: 20px;
+		cursor: pointer;
+	}
+}

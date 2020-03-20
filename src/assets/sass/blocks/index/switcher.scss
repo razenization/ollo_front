@@ -1,0 +1,41 @@
+.switcher {
+	margin: 1rem 0;
+	width: 100%;
+	height: 2.7rem;
+	display: flex;
+	font-weight: 500;
+	color: #2B7BFB;
+
+	p {
+		display: inline-block;
+	}
+
+	div {
+		cursor: pointer;
+		width: 50%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background .1s linear;
+	}
+
+	div:hover {
+		color: #fff;
+		background: #2B7BFB;
+	}
+
+	.selected {
+		color: #fff;
+	}
+}
+
+.upcoming__switch {
+	background: #2B7BFB;
+	border-radius: 15px 0 0 15px;
+}
+
+.past__switch {
+	border: 2px solid #2B7BFB;
+	border-radius: 0 15px 15px 0;
+}
