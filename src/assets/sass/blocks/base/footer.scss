@@ -1,8 +1,13 @@
 .footer {
-	margin-left: 170px;
+	margin-left: 120px;
 	height: 150px;
 	background: #1F4C94;
-	
+	@include media-breakpoint-down (md) {
+		height: 240px;
+	}
+	@include media-breakpoint-down(lg) {
+        margin: 0;
+    }
 }
 
 .footer__content {
@@ -61,5 +66,12 @@
 
 	.credentials {
 		margin-top: 10px;
+	}
+
+	@include media-breakpoint-down (md) {
+		text-align: left;
+		p.bet, p.copyright {
+			display: inline-block;
+		}
 	}
 }

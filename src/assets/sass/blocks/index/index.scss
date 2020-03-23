@@ -4,18 +4,28 @@
 }
 
 .content__wrapper {
-	margin-left: 170px;
+	margin-left: 120px;
 	width: auto;
 	position: relative;
 	min-height: calc(100vh - 150px);
+	@include media-breakpoint-down(xs) {
+        margin: 0;
+    }
 }
 
-.banner {
+.content {
 	
 }
 
+.banner {
+	margin-bottom: 60px;
+	@include media-breakpoint-down(xs) {
+		margin-top: 60px;
+	}
+}
+
 .banner__container {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 }
 

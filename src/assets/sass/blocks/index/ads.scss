@@ -1,38 +1,67 @@
 /* Motd */
 
 .motd {
-	height: 285px;
+	// height: 255px;
+	height: 20vw;
 	display: flex;
 	flex-direction: column;
-	background: #DDDDDD;
+	background: #fff;
 	border-radius: 15px;
 	align-items: center;
 	justify-content: flex-end;
-	cursor: pointer;
-
-
-	.motd__bg-img {
-		// position: absolute;
-		// margin-bottom: 7%;
-		border-radius: 15px;
-		// bottom: -40px;
-		width: 300px;
-		opacity: .4;
+	cursor: pointer;	
+	color: #fff;
+	@include media-breakpoint-down(md) {
+		height: 50vh;
 	}
 
-	.title {
-		margin-bottom: 20px;
-		font-size: 1rem;
-		line-height: 15px;
-
-		color: #202020;
-	}
 }
 
 .motd__overview {
-	padding-bottom: 5%;
-	align-items: center;
+	width: 92%;
+	height: 100%;
+	padding-bottom: 1%;
+	// margin: 0 auto;
 	position: relative;
+}
+
+.motd__bg-pic__wrapper {
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	bottom: 5%;
+	border-radius: 15px;
+	background: url('../img/factory.jpg') left top no-repeat;
+	-webkit-background-size: cover;
+    background-size: cover;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 15px;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 1;
+	}
+}
+
+.motd__bg-img {
+	border-radius: 15px;
+	width: 100%;
+	opacity: 1;
+}
+
+.motd__title {
+	font-weight: 500;
+	margin-bottom: 5%;
+	padding-top: 5%;
+	font-size: 1rem;
+	line-height: 15px;
+
+	color: #202020;
 }
 
 .motd__teams-images {
@@ -45,23 +74,27 @@
 	position: absolute;
 	align-items: center;
 	justify-content: space-between;
+	z-index: 2;
 
 	.motd__team-img {
 		display: block;
-		width: 75px;
+		width: 30%;
 	}
 }
 
 .motd__info {
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	line-height: 1;
 	
 	.motd__versus {
-		font-style: normal;
 		font-weight: 700;
-		font-size: 3.6rem;
+		font-size: 2rem;
+		background: linear-gradient(180deg, #2B6CD4 0%, #578FE9 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	.motd__score {
@@ -71,7 +104,9 @@
 	}
 
 	.motd__score-delim {
-		color: #2E3ED4;
+		background: linear-gradient(180deg, #2B6CD4 0%, #578FE9 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	.motd__time-best-of {
@@ -103,7 +138,7 @@
 }
 
 .vk__title {
-	width: 70%;
+	width: 80%;
 	line-height: 25px;
 	font-weight: 700;
 	font-size: 24px;
@@ -136,11 +171,15 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 0;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 5%;
+	}
 }
 
 .skin-main {
 	margin-top: 15px;
 	width: 95%;
+	
 }
 
 .skin-bg-left {
