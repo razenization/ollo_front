@@ -6745,6 +6745,60 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.dial {
+    border-color: #3D4274;
+    color: #E74C3C;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+}
+
+.dial p {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+}
+
+.dial canvas {
+    position: absolute;
+}
+
+.dial:hover .dial__tooltip {
+    opacity: 1;
+}
+
+.dial__tooltip {
+    opacity: 0;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: inherit;
+    transition: opacity .2s;
+    position: absolute;
+    z-index: 1;
+}
+
+.dial__tooltip:after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
 .sidenav__wrapper {
     width: 100%;
 }
@@ -7703,14 +7757,26 @@ h1, h2, h3, h4, h5, h6, p {
     color: #979797;
 }
 
-.team__picks {
+.picks__bans .row > div:first-of-type {
+    padding-right: 5px;
+}
+
+.picks__bans .row > div:last-of-type {
+    padding-left: 5px;
+}
+
+.team__bans .stats-header {
+    justify-content: center;
+}
+
+.team__picks, .team__bans {
     border-radius: 15px;
     background: #fff;
     padding: 15px;
     margin-bottom: 15px;
 }
 
-.map__pick {
+.map__pick, .map__ban {
     border-radius: 15px;
     width: 100%;
     height: 42px;
@@ -7721,6 +7787,10 @@ h1, h2, h3, h4, h5, h6, p {
     overflow: hidden;
 }
 
+.map__ban {
+    height: 29px;
+}
+
 .map__pick.picked {
     background: #2b7bfb;
 }
@@ -7729,7 +7799,15 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: 0.4;
 }
 
-.map__pick-name {
+.map__ban.banned {
+    background: #e74c3c;
+}
+
+.map__ban.banned > .map__ban-img {
+    opacity: 0.4;
+}
+
+.map__pick-name, .map__ban-header {
     position: relative;
     margin: auto;
     font-weight: 700;
@@ -7738,7 +7816,12 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 1;
 }
 
-.map__pick-img {
+.map__ban-header {
+    font-size: 10px;
+    line-height: 0.8;
+}
+
+.map__pick-img, .map__ban-img {
     position: absolute;
     width: 100%;
     margin: 0 auto;
@@ -7775,7 +7858,7 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
     border-radius: 15px;
     width: 100%;
-    height: 42px;
+    height: 43.3px;
     margin: 10px 0;
     text-align: center;
     position: relative;
@@ -8028,6 +8111,7 @@ h1, h2, h3, h4, h5, h6, p {
 .wins-qty, .additional-qty {
     font-size: 22px;
     font-weight: 700;
+    text-align: center;
 }
 
 .wins-header, .additional-header {
@@ -8659,6 +8743,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
 }
 
+.calc__kf.higher {
+    color: #2B7BFB;
+}
+
 .bookies__calculator-body {
     margin-top: 20px;
     padding: 10px 20px;
@@ -8954,4 +9042,142 @@ h1, h2, h3, h4, h5, h6, p {
 
 .best__bookie-link a:hover {
     background: #3676DD;
+}
+
+.stats__preview .row > div:last-of-type {
+    padding-left: 0;
+}
+
+.team__stats-wrapper, .avg__stats-wrapper {
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.team__stats-wrapper .row > div:first-of-type {
+    position: relative;
+}
+
+.team__stats-wrapper .row > div:first-of-type:after {
+    content: "";
+    height: 80%;
+    width: 3px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background: #C4C4C4;
+}
+
+.team__stats-wrapper .row > div:last-of-type {
+    text-align: right;
+}
+
+.team__stats-wrapper .row > div:last-of-type .option__estimate {
+    background: #3D4274;
+}
+
+.avg__stats-wrapper {
+    text-align: center;
+}
+
+.team__stats-logo {
+    height: 50px;
+}
+
+.team__stats-content, .maps__played-content, .time__avg-content {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.maps__played-content, .time__avg-content {
+    margin-top: 20px;
+    height: 120px;
+    justify-content: center;
+}
+
+.team__stats-option, .maps__played-option, .time__avg-option {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+
+.maps__played-option, .time__avg-option {
+    width: 30%;
+}
+
+.option__estimate-wrapper {
+    height: 80%;
+    width: 20px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.option__estimate {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: #E74C3C;
+}
+
+.option__estimate.weaker {
+    opacity: 0.4;
+}
+
+.option__header {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.maps__played-header, .time__avg-header {
+    font-size: 12px;
+}
+
+.avg__stats-wrapper .row > div:first-of-type {
+    padding-right: 0;
+}
+
+.avg__stats-wrapper .row > div:last-of-type {
+    padding-left: 0;
+}
+
+.maps__played-graph, .time__avg-graph {
+    height: 100px;
+    width: 100px;
+    background: #3D4274;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.maps__played-graph:after, .time__avg-graph:after {
+    content: "";
+    height: 65%;
+    width: 65%;
+    position: absolute;
+    left: 17.5%;
+    top: 17.5%;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.graph__inner-left {
+    width: 80%;
+    height: 100%;
+    background: #E74C3C;
+}
+
+.graph__inner-right {
+    width: 20%;
+    height: 100%;
+    background: #3D4274;
 }
