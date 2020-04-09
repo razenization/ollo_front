@@ -17,6 +17,26 @@
 				$(this).parents('.mutual__switcher-choices').removeClass('hover');
 			});
 
+<<<<<<< HEAD
+		$('.stats__switcher-choice').hover(
+			function() {
+				$('.stats__bg').addClass('active');
+				$(this).parents('.stats__switcher-choices').addClass('hover');
+			}, function () {
+			});
+
+		$('.stats__bg').hover(
+			function() {
+				if ($(this).attr('class').search('active') > -1) {
+					$(this).parents('.stats__switcher-choices').addClass('hover');
+				}
+			}, function () {
+				$(this).removeClass('active');
+				$(this).parents('.stats__switcher-choices').removeClass('hover');
+			});
+
+=======
+>>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 		// Custom selectbox script (modified)
 		x = document.getElementsByClassName("custom-select");
 		for (i = 0; i < x.length; i++) {
@@ -120,5 +140,12 @@
 
 			// if (lineRound == true && lineWidth < width) context.lineCap = "round";
 		}
+<<<<<<< HEAD
+
+		var a = ['dog', 'cat', 'gogo'];
+		a[100] = 'fox';
+		console.log(a.length);
+=======
+>>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 	});
 })(jQuery);

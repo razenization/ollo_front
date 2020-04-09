@@ -79,12 +79,9 @@
 			
 			<div class="row">
 				<div class="col-xl-9 col-lg-8">
-					<div class="match__main-info">
-<<<<<<< HEAD
-=======
-						<!-- <div class="match__main-bg"></div> -->
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
-						<div class="match__team">
+					<div class="match__main-info-live">
+						<div class="match__team-live">
+							<img src="assets/img/util/game-logo/ct-logo.svg" alt="" class="match__team-bg">
 							<div class="match__team-preview">
 								<p class="match__team-name">Vitality</p>
 								<div class="match__img-full">
@@ -138,10 +135,11 @@
 							</div>
 							<div class="match__data-other">
 								<p class="match__data-online">Online</p>
-								<p class="match__data-timeleft-wrapper">До начала: <span class="match__data-timeleft">5 ч 45 мин</span></p>
+								<p class="live-match__data-timeleft-wrapper">МАТЧ В <span class="match__data-live">LIVE</span>!</p>
 							</div>
 						</div>
-						<div class="match__team">
+						<div class="match__team-live" >
+							<img src="assets/img/util/game-logo/t-logo.svg" alt="" class="match__team-bg">
 							<div class="match__team-preview">
 								<div class="match__img-full">
 									<img src="assets/img/teams/spirit/logo.svg" alt="" class="match__team-img">
@@ -186,12 +184,288 @@
 									<p class="player__nick">?</p>
 								</div>
 							</div> <!-- ./match__team-players -->
-<<<<<<< HEAD
-						</div> <!-- ./match__team -->					</div> <!-- ./match__main-info -->
-=======
 						</div> <!-- ./match__team -->
-					</div> <!-- ./match__main-info -->
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
+					</div> <!-- ./match__main-info-live -->
+
+					<div class="media">
+						<!-- <div class="media__switcher">
+							<div class="streams__switch">
+								<a href="#" class="">Прямая трансляция</a>
+							</div>
+							<div class="data__switch  selected">
+								<a href="#" class="">Детальная статистика</a>
+							</div>
+						</div> -->
+						<div class="stream__block">
+							<div class="match__streams">
+								<div class="stream__option  selected">1</div>
+								<div class="stream__option">2</div>
+								<div class="stream__option">3</div>
+								<div class="stream__option">4</div>
+								<div class="stream__option">5</div>
+								<div class="stream__option">6</div>
+							</div>
+							<div class="live-stream__wrapper">
+								<iframe
+								src="https://player.twitch.tv/?channel=csgomc_ru&muted=true"
+								class="stream"
+								height=606.5
+								width="100%"
+								frameborder="0"
+								scrolling="no"
+								allowfullscreen="true"></iframe>
+							</div>
+						</div>
+					</div>
+
+					<div class="match__logs">
+						<img src="assets/img/util/maps/bg/inferno.svg" alt="" class="logs-bg">
+						<div class="row">
+							<div class="col-5">
+								<div class="match__data-log">
+									<div class="match__data-log__entry neutral rs">
+										<span class="log__entry-action">Раунд начат</span>
+									</div>
+									<div class="match__data-log__entry win t">
+										<span class="log__entry-event">Раунд завершен - Победитель:</span>
+										<span class="log__entry-winner">T</span>
+										<span class="log__entry-score">(<span class="log__entry-score-inner t">5</span>:<span class="log__entry-score-inner ct">10</span>) - </span>
+										<span class="log__entry-wintype">Бомба взорвалась</span>
+									</div>
+									<div class="match__data-log__entry defuse">
+										<span class="log__entry-nick">stellar</span>
+										<span class="log__entry-weapon">defkit</span>
+										<span class="log__entry-action">снял пачку</span>
+										<span class="log__entry-optional">(3 vs 1)</span>
+									</div>
+									<div class="match__data-log__entry bomb">
+										<span class="log__entry-nick">stellar</span>
+										<span class="log__entry-weapon">bomb</span>
+										<span class="log__entry-action">заложил бомбу</span>
+										<span class="log__entry-optional">(3 vs 1)</span>
+									</div>
+									<div class="match__data-log__entry kill ct">
+										<span class="log__entry-nick">stellar</span>
+										<span class="log__entry-assist">iDK</span>
+										<span class="log__entry-weapon">deagle</span>
+										<span class="log__entry-weapon-optional">headshot</span>
+										<span class="log__entry-nick">s1mple</span>
+									</div>
+									<div class="match__data-log__entry kill t">
+										<span class="log__entry-nick">stellar</span>
+										<span class="log__entry-assist">iDK</span>
+										<span class="log__entry-weapon">deagle</span>
+										<span class="log__entry-weapon-optional">headshot</span>
+										<span class="log__entry-nick">s1mple</span>
+									</div>
+									<div class="match__data-log__entry neutral rs">
+										<span class="log__entry-action">Раунд начат</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-7">
+								<div class="match__data-mainstats">
+									<div class="round-data">
+										<span class="match__data-round">Раунд: <span class="match__data-round-main">14</span></span>
+										<p class="match__data-map">Карта: <span class="match__data-map-main">inferno</span></p>
+									</div>
+									<span class="match__data-score"><span class="match__data-score-inner">5</span>:<span class="match__data-score-inner">10</span></span>
+									<div class="time-data">
+										<span class="match__data-timeleft">0:19</span>
+										<span class="match__data-bomb"><img src="assets/img/scoreboard/weapons/c4.svg" alt="" class="bomb-img"></span>
+									</div>
+								</div>
+								<div class="match__data-table">
+									<table class="match__maintable">
+										<tr class="header__row">
+
+											<!-- <th class="match__maintable-header-logo"><img src="assets/img/teams/vitality/logo.svg" alt="" class="maintable-logo"></th> -->
+											<th class="match__maintable-header-name">
+												<img src="assets/img/teams/vitality/logo.svg" alt="" class="maintable-logo">
+												<span class="maintable-team-name">Vitality</span>
+												<!-- <span class="match__maintable-header-name-inner"></span> -->
+											</th>
+											<th class="match__maintable-header-weapon">Weapon</th>
+											<th class="match__maintable-header-hp"><img src="assets/img/scoreboard/header/hp.svg" alt="" class="header-img"></th>
+											<th class="match__maintable-header-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="header-img"></th>
+											<th class="match__maintable-header-money">$</th>
+											<th class="match__maintable-header-kills">K</th>
+											<th class="match__maintable-header-assists">A</th>
+											<th class="match__maintable-header-deaths">D</th>
+											<th class="match__maintable-header-adr">ADR</th>
+										</tr>
+										<tr class="match__maintable-row">
+											<td class="match__maintable-player-nick">shox</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar high">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row">
+											<td class="match__maintable-player-nick">RpK-</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar low">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row">
+											<td class="match__maintable-player-nick">apEX</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar mid">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row">
+											<td class="match__maintable-player-nick">ZywOo</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar mid">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row">
+											<td class="match__maintable-player-nick">misutaaa</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar high">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="header__row t">
+
+											<!-- <th class="match__maintable-header-logo"><img src="assets/img/teams/vitality/logo.svg" alt="" class="maintable-logo"></th> -->
+											<th class="match__maintable-header-name">
+												<img src="assets/img/teams/spirit/logo.svg" alt="" class="maintable-logo">
+												<span class="maintable-team-name">Spirit</span>
+												<!-- <span class="match__maintable-header-name-inner"></span> -->
+											</th>
+											<th class="match__maintable-header-weapon">Weapon</th>
+											<th class="match__maintable-header-hp"><img src="assets/img/scoreboard/header/hp.svg" alt="" class="header-img"></th>
+											<th class="match__maintable-header-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="header-img"></th>
+											<th class="match__maintable-header-money">$</th>
+											<th class="match__maintable-header-kills">K</th>
+											<th class="match__maintable-header-assists">A</th>
+											<th class="match__maintable-header-deaths">D</th>
+											<th class="match__maintable-header-adr">ADR</th>
+										</tr>
+										<tr class="match__maintable-row t">
+											<td class="match__maintable-player-nick">shox</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar mid">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row t">
+											<td class="match__maintable-player-nick">RpK-</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar mid">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row t">
+											<td class="match__maintable-player-nick">apEX</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar mid">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row t">
+											<td class="match__maintable-player-nick">ZywOo</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar low">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+										<tr class="match__maintable-row t">
+											<td class="match__maintable-player-nick">misutaaa</td>
+											<td class="match__maintable-player-weapon"><img src="assets/img/scoreboard/weapons/deagle.svg" alt="" class="weapon-img"></td>
+											<td class="match__maintable-player-hp">
+												<div class="hp-bar low">
+													<div class="hp-bar-inner">81</div>
+												</div>
+											</td>
+											<td class="match__maintable-player-armor"><img src="assets/img/scoreboard/weapons/helmet.svg" alt="" class="row-img"></td>
+											<td class="match__maintable-player-money">5700</td>
+											<td class="match__maintable-player-kills">4</td>
+											<td class="match__maintable-player-assists">4</td>
+											<td class="match__maintable-player-deaths">4</td>
+											<td class="match__maintable-player-adr">89.5</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<div class="stats__preview">
 						<div class="row">
@@ -225,7 +499,6 @@
 												</div>
 												<div class="map__ban  banned">
 													<img src="assets/img/util/maps/prematch/dd2.svg" alt="" class="map__ban-img">
-<<<<<<< HEAD
 													<div class="map__ban-header-wrapper">
 														<span class="map__ban-header">Dust 2</span>
 														<img src="assets/img/teams/spirit/logo.svg" alt="" class="map__ban-logo">
@@ -251,36 +524,15 @@
 														<span class="map__ban-header">Inferno</span>
 														<img src="assets/img/teams/vitality/logo.svg" alt="" class="map__ban-logo">
 													</div>
-=======
-													<p class="map__ban-header">Забанено Spirit</p>
-												</div>
-												<div class="map__ban  banned">
-													<img src="assets/img/util/maps/prematch/inferno.svg" alt="" class="map__ban-img">
-													<p class="map__ban-header">Забанено Vitality</p>
-												</div>
-												<div class="map__ban  banned">
-													<img src="assets/img/util/maps/prematch/dd2.svg" alt="" class="map__ban-img">
-													<p class="map__ban-header">Забанено Spirit</p>
-												</div>
-												<div class="map__ban  banned">
-													<img src="assets/img/util/maps/prematch/inferno.svg" alt="" class="map__ban-img">
-													<p class="map__ban-header">Забанено Vitality</p>
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 												</div>
 											</div> <!-- ./team__bans -->
 										</div>
 									</div>
-<<<<<<< HEAD
 								</div>								<div class="player__compare">
 									<div class="player__compare-graph">
 										<canvas id="player-compare-bg" height="173" width="173"></canvas>
 										<canvas id="player-compare" height="100" width="100"></canvas>
 									</div>
-=======
-								</div>
-								<div class="player__compare">
-									<div class="player__compare-graph"></div>
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 									<div class="player__compare-players">
 										<div class="compare__players">
 											<div class="compare__header">
@@ -305,12 +557,7 @@
 											<a href="#" class="compare__member">magixx</a>
 										</div>
 									</div>
-<<<<<<< HEAD
 								</div> <!-- ./player__compare -->							</div> <!-- ./col-6 -->
-=======
-								</div> <!-- ./player__compare -->
-							</div> <!-- ./col-6 -->
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 							<div class="col-6">
 								<div class="map__stats">
 									<div class="stats-header">
@@ -435,14 +682,7 @@
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
 								</div>							</div> <!-- ./col-6 -->
-=======
-
-
-								</div>
-							</div> <!-- ./col-6 -->
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 						</div> <!-- ./row -->
 					</div> <!-- ./stats__preview -->
 
@@ -610,12 +850,7 @@
 							</div> <!-- ./row -->
 						</div> <!-- ./teams__past-matches -->
 						<a href="#" class="hide__button"></a>
-<<<<<<< HEAD
 										</div> <!-- ./latest__results -->
-=======
-					</div> <!-- ./latest__results -->
-
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 					<div class="mutual__matches">
 						<p class="mutual__matches-header">Очные встречи</p>
 						<div class="mutual__matches-overall">
@@ -654,11 +889,7 @@
 								<div class="mutual__bg"></div>
 							</ul>
 						</div>
-<<<<<<< HEAD
 					
-=======
-
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 						<table class="mutual__main-table">
 							<tr class="mutual__main-tablerow">
 								<td class="mutual__event-wrapper"><img src="assets/img/events/esl.svg" alt="" class="mutual__event-img"></td>
@@ -700,48 +931,10 @@
 								<td class="mutual__team-bestof">BO3</td>
 							</tr>
 						</table>
-<<<<<<< HEAD
 					
 						<a href="#" class="hide__button"></a>
 										</div> <!-- ./mutual__matches -->
-=======
-
-						<a href="#" class="hide__button"></a>
-					</div> <!-- ./mutual__matches -->
-
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
-					<div class="streams">
-						<p class="streams__header">Прямые трансляции</p>
-						<div class="streams__container">
-							<div class="stream__link-wrapper">
-								<p class="stream__link-name">HitMediaRU8</p>
-								<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__link-flag">
-								<img src="assets/img/factory.jpg" alt="" class="stream__link-bg">
-								<a href="#" class="stream__link">Смотреть</a>
-							</div>
-							<div class="stream__link-wrapper  hover">
-								<p class="stream__link-name">HitMediaRU8</p>
-								<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__link-flag">
-								<a href="#" class="stream__link">Смотреть</a>
-							</div>
-							<div class="stream__link-wrapper">
-								<p class="stream__link-name">HitMediaRU8</p>
-								<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__link-flag">
-								<a href="#" class="stream__link">Смотреть</a>
-							</div>
-							<div class="stream__link-wrapper">
-								<p class="stream__link-name">HitMediaRU8</p>
-								<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__link-flag">
-								<a href="#" class="stream__link">Смотреть</a>
-							</div>
-							<div class="stream__link-wrapper">
-								<p class="stream__link-name">HitMediaRU8</p>
-								<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__link-flag">
-								<a href="#" class="stream__link">Смотреть</a>
-							</div>
-						</div>
-						<a href="#" class="hide__button"></a>
-					</div> <!-- ./streams -->
+					
 
 					<div class="comments">
 						<div class="comments__container">
@@ -799,9 +992,8 @@
 							<button type="submit" id="submit__comment"></button>
 						</form>
 					</div> <!-- ./comments -->
-
-
 				</div> <!-- ./col-89 -->
+
 				<div class="col-xl-3 col-lg-4">
 					<div class="live__matches">
 						<div class="live__matches-item">
@@ -885,10 +1077,7 @@
 							</div>
 						</div> <!-- ./live__matches-item -->
 					</div> <!-- ./live__matches -->
-<<<<<<< HEAD
-=======
 
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
 					<div class="bookies__calculator">
 						<div class="bookies__table-wrapper">
 							<table class="bookie__calculator-coef">
@@ -923,134 +1112,63 @@
 									<td class="calc__kf">1.63</td>
 								</tr>
 							</table> <!-- ./bookie__calculator-coef -->
-<<<<<<< HEAD
-						</div> <!-- ./bookies__table-wrapper -->						<div class="bookies__calculator-body">
-=======
-						</div> <!-- ./bookies__table-wrapper -->
-						<div class="bookies__calculator-body">
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
-							<div class="choose__team">
-								<p class="choose__team-header">Выбор команды:</p>
-								<div class="choose__team-options">
-									<a href="#" class="team"><img src="assets/img/teams/vitality/logo.svg" alt="" class="team-pic"></a>
-									<a href="#" class="team"><img src="assets/img/teams/spirit/logo.svg" alt="" class="team-pic"></a>
-								</div>
-							</div>
-							<div class="choose__bookie">
-								<p class="choose__bookie-header">Выбор БК:</p>
-								<!-- <div class="choose__bookie-switcher">
-									<img src="" alt="" class="bookie__img-small">
-									<span class="bookie__cf"></span>
-								</div> -->
-								<div class="custom-select">
-									<select>
-										<!-- <option value="0">Select bookie</option> -->
-										<option value="1">2.30</option>
-										<option value="2">2.40</option>
-										<option value="3">2.56</option>
-										<option value="4">3.30</option>
-									</select>
-								</div>
-								<a href="#" class="submit__bet">Поставить!</a>
-							</div>
-							<div class="bookie__calculator-results">
-								<div class="user__bet">
-									<p class="user__bet-header">Ваша ставка:</p>
-									<div class="bet__text-wrapper">
-										<input type="text" name="bet__input" class="user__bet-input">
-									</div>
-								</div>
-								<div class="user__win">
-									<p class="user__win-header">Возможный выигрыш:</p>
-									<div class="bet__text-wrapper  output">
-										<input type="text" name="bet__win-output" class="user__bet-input" disabled>
-									</div>
-								</div>
-							</div> <!-- ./bookie__calculator-results -->
-						</div> <!-- ./bookie__calculator-body -->
-					</div> <!-- ./bookie__calculator -->
+						</div> <!-- ./bookies__table-wrapper -->					</div> <!-- ./bookie__calculator -->
 
-					<div class="players__social">
-						<div class="row">
-							<div class="col-6">
-								<div class="team__social">
-									<div class="team__social-header">
-										<img src="assets/img/teams/vitality/logo.svg" alt="">
-										<p class="team__social-name">Vitality</p>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">shox</p>
-										<a href="#" class="member-steam  active"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">RpK-</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">apEX</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">ZyWoO</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">misutaaa</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
+					<div class="chat__box">
+						<div class="chat__messages">
+							<div class="chat__messages-item  purple">
+								<div class="chat-img-wrapper">
+									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
 								</div>
-							</div>
-							<div class="col-6">
-								<div class="team__social">
-									<div class="team__social-header">
-										<img src="assets/img/teams/spirit/logo.svg" alt="">
-										<p class="team__social-name">Spirit</p>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">chopper</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">mir</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter  active"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">somedieyoung</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram  active"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">iDiSBALANCE</p>
-										<a href="#" class="member-steam  active"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
-									<div class="team__social-item">
-										<p class="member-name">magixx</p>
-										<a href="#" class="member-steam"><img src="assets/img/icons/social/steam.svg" alt=""></a>
-										<a href="#" class="member-twitter  active"><img src="assets/img/icons/social/twitter.svg" alt=""></a>
-										<a href="#" class="member-instagram"><img src="assets/img/icons/social/instagram.svg" alt=""></a>
-									</div>
+								<div class="message__body">
+									<p class="chat-nick">Amaterasu</p>
+									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
 								</div>
-							</div>
-						</div> <!-- ./row -->
-					</div> <!-- ./players__social -->
-<<<<<<< HEAD
+							</div> <!-- ./chat__messages-item -->
+							<div class="chat__messages-item  red">
+								<div class="chat-img-wrapper">
+									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+								</div>
+								<div class="message__body">
+									<p class="chat-nick">Amaterasu</p>
+									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+								</div>
+							</div> <!-- ./chat__messages-item -->
+							<div class="chat__messages-item  green">
+								<div class="chat-img-wrapper">
+									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+								</div>
+								<div class="message__body">
+									<p class="chat-nick">Amaterasu</p>
+									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+								</div>
+							</div> <!-- ./chat__messages-item -->
+							<div class="chat__messages-item  purple">
+								<div class="chat-img-wrapper">
+									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+								</div>
+								<div class="message__body">
+									<p class="chat-nick">Amaterasu</p>
+									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+								</div>
+							</div> <!-- ./chat__messages-item -->
+							<div class="chat__messages-item  purple right">
+								<div class="message__body">
+									<p class="chat-nick">Amaterasu</p>
+									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+								</div>
+								<div class="chat-img-wrapper">
+									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+								</div>
+							</div> <!-- ./chat__messages-item -->
+						</div>
+						<form action="/" id="chat__form">
+							<input type="text" id="send__message" name="send__message-text" placeholder="Выскажи своё мнение здесь...">
+							<!-- <textarea name="input__comment-text" id="leave__comment" placeholder="Выскажи своё мнение здесь..."></textarea> -->
+							<button type="submit" id="submit__message"></button>
+						</form>
+					</div>
+
 					<div class="best__bookies">
 						<p class="best__bookies-header">Лучшие букмекеры от «OLLO»</p>
 						<div class="best__bookies__table-wrapper">
@@ -1088,7 +1206,8 @@
 							</table>
 						</div>
 						<a href="#" class="hide__button"></a>
-					</div>					<div class="skin__ad">
+					</div>
+					<div class="skin__ad">
 						<img src="assets/img/rightbar/ak47.svg" alt="" class="skin-main">
 						<img src="assets/img/rightbar/ak47-bg-left.svg" alt="" class="skin-bg-left">
 						<img src="assets/img/rightbar/ak47-bg-right.svg" alt="" class="skin-bg-right">
@@ -1102,101 +1221,122 @@
 
 <script type="text/javascript" src="assets/other/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="assets/other/prematch.js"></script>
-=======
-					<!-- <table class="mutual__main-table">
-							<tr class="mutual__main-tablerow">
-								<td class="mutual__event-wrapper"><img src="assets/img/events/esl.svg" alt="" class="mutual__event-img"></td>
-								<td class="mutual__team-img-wrapper  left"><img src="assets/img/teams/vitality/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-name  left">Ninjas in Pyjamas</td>
-								<td class="mutual__team-score  won">2</td>
-								<td class="mutual__match-delim"><span class="mutual__match-date">24.04</span></td>
-								<td class="mutual__team-score">0</td>
-								<td class="mutual__team-name  right">Evil Geniuses</td>
-								<td class="mutual__team-img-wrapper  right"><img src="assets/img/teams/spirit/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-bestof">BO3</td>
-							</tr>
-							<tr class="mutual__main-tablerow">
-								<td class="mutual__event-wrapper"><img src="assets/img/events/esl.svg" alt="" class="mutual__event-img"></td>
-								<td class="mutual__team-img-wrapper  left"><img src="assets/img/teams/vitality/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-name  left">Natus Vincere</td>
-								<td class="mutual__team-score  won">2</td>
-								<td class="mutual__match-delim">
-									<span class="mutual__match-date">24.04</span>
-									<p class="mutual__match-type">Online</p>
-								</td>
-								<td class="mutual__team-score">0</td>
-								<td class="mutual__team-name  right">Virtus.pro</td>
-								<td class="mutual__team-img-wrapper  right"><img src="assets/img/teams/spirit/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-bestof">BO3</td>
-							</tr>
-							<tr class="mutual__main-tablerow">
-								<td class="mutual__event-wrapper"><img src="assets/img/events/esl.svg" alt="" class="mutual__event-img"></td>
-								<td class="mutual__team-img-wrapper  left"><img src="assets/img/teams/vitality/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-name  left">OG</td>
-								<td class="mutual__team-score">1</td>
-								<td class="mutual__match-delim">
-									<span class="mutual__match-date">24.04</span>
-									<p class="mutual__match-type">Lan</p>
-								</td>
-								<td class="mutual__team-score  won">2</td>
-								<td class="mutual__team-name  right">Astralis</td>
-								<td class="mutual__team-img-wrapper  right"><img src="assets/img/teams/spirit/logo.svg" alt="" class="mutual__team-img"></td>
-								<td class="mutual__team-bestof">BO3</td>
-							</tr>
-						</table> -->
-						<div class="best__bookies">
-							<p class="best__bookies-header">Лучшие букмекеры от «OLLO»</p>
-							<div class="best__bookies__table-wrapper">
-								<table class="best__bookies__table">
-									<tr class="best__bokies__tablerow">
-										<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
-										<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-										<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-										<td class="best__bookie-link"><a href="#">Перейти</a></td>
-									</tr>
-									<tr class="best__bokies__tablerow">
-										<td class="best__bookie-logo"><img src="assets/img/bookies/parimatch.svg" alt=""></td>
-										<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-										<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-										<td class="best__bookie-link"><a href="#">Перейти</a></td>
-									</tr>
-									<tr class="best__bokies__tablerow">
-										<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
-										<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-										<td class="best__bookie-bonus  exclusive"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-										<td class="best__bookie-link"><a href="#">Перейти</a></td>
-									</tr>
-									<tr class="best__bokies__tablerow">
-										<td class="best__bookie-logo"><img src="assets/img/bookies/parimatch.svg" alt=""></td>
-										<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-										<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-										<td class="best__bookie-link"><a href="#">Перейти</a></td>
-									</tr>
-									<tr class="best__bokies__tablerow">
-										<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
-										<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-										<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-										<td class="best__bookie-link"><a href="#">Перейти</a></td>
-									</tr>
-								</table>
-							</div>
-							<!-- <a href="#" class="hide__button"></a> -->
-						</div>
-						<div class="skin__ad">
-							<img src="assets/img/rightbar/ak47.svg" alt="" class="skin-main">
-							<img src="assets/img/rightbar/ak47-bg-left.svg" alt="" class="skin-bg-left">
-							<img src="assets/img/rightbar/ak47-bg-right.svg" alt="" class="skin-bg-right">
-							<a href="#" class="skin__btn">Забрать скин!</a>
-						</div>					</div> <!-- ./col-34 -->
-				</div> <!-- ./row -->
-			</div>
-		</div>
-		<a href="" class="button-to-top"></a>
-	</div>
+<script src="assets/other/Chart.min.js"></script>
+<script>
+	var canvas = document.getElementById('player-compare');
+	var ctx = canvas.getContext('2d');
+	var compareChart = new Chart(ctx, {
+		type: 'radar',
+		data: {
+			labels: ['WIN %', 'MVP', 'FP', 'KILLS', 'KDA', 'K/D', 'ACC', 'DPR'],
+			datasets: [{
+				data: [55, 82, 44, 66, 72, 42, 77, 88,],
+				// backgroundColor: 'rgba(43, 123, 251, 0.15)',
+				borderColor: '#E74C3C',
+				borderWidth: 1,
+				backgroundColor: 'rgba(231, 76, 60, 0.13)',
+				pointBackgroundColor: "#E74C3C"
+				// fill: false,
+			}, {
+				data: [72, 42, 77, 88, 55, 82, 44, 66,],
+				// backgroundColor: 'rgba(43, 123, 251, 0.15)',
+				borderColor: '#3D4274',
+				borderWidth: 1,
+				backgroundColor: 'rgba(61, 66, 116, 0.13)',
+				pointBackgroundColor: "#3D4274"
+				// fill: false,
+			}]
+		},
+		options: {
+			animation : {
+				onComplete : function () {
 
-	<script type="text/javascript" src="assets/other/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="assets/other/prematch.js"></script>
->>>>>>> 40ad228022632d9e7b03fbdb3d56e885945e6a8d
+				}
+			},
+			elements : {
+				point : {
+					radius: 2,
+				}
+			},
+			responsive: true,
+			legend: {
+				display: false,
+			},
+			scale: {
+				angleLines: {
+					display: false
+				},
+				ticks: {
+					display: false,
+					// maxTicksLimit: 2,
+					// fontSize: 10,
+					// backdropColor: 'black',
+					max: 100,
+					min: 0,
+					showLabelBackdrop: false,
+				},
+				pointLabels:{
+					fontColor: "#000",
+				},
+
+
+				gridLines: {
+					display: false
+				},
+			}
+		}
+	});
+
+	// setTimeout(function () {
+		
+	// }, 100);
+
+	var bgCanvas = document.getElementById('player-compare-bg');
+	var bgCtx = bgCanvas.getContext('2d');
+	bgCtx.globalCompositeOperation='destination-over';
+	var numberOfSides = 8, size = 64, vertexes = [];
+	// bgCtx.translate(-10, -12);
+
+	// bgCtx.beginPath();
+	bgCtx.moveTo (compareChart.scale.xCenter +  size * Math.cos(0), compareChart.scale.yCenter +  size *  Math.sin(0));
+
+
+	for (var i = 1; i <= numberOfSides; i += 1) {
+		let curPoint = [compareChart.scale.xCenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), compareChart.scale.yCenter + size * Math.sin(i * 2 * Math.PI / numberOfSides)];
+		// bgCtx.lineTo(curPoint[0], curPoint[1]);
+		vertexes.push(curPoint);
+	}
+
+	bgCtx.strokeStyle = "rgba(43, 123, 251, 1)";
+	// bgCtx.fillStyle = "rgba(43, 123, 251, 0.07)";
+	bgCtx.lineWidth = 1;
+	bgCtx.stroke();
+	bgCtx.fill();
+
+	console.log(vertexes);
+	bgCtx.beginPath();
+	bgCtx.strokeStyle = "#fff";
+	bgCtx.lineWidth = 3;
+	for (var i = 0; i < vertexes.length; i++) {
+		bgCtx.moveTo(compareChart.scale.xCenter, compareChart.scale.yCenter);
+		bgCtx.lineTo(vertexes[i][0], vertexes[i][1]);
+	}
+	bgCtx.stroke();
+
+
+	bgCtx.beginPath();
+	bgCtx.moveTo (compareChart.scale.xCenter +  size * Math.cos(0), compareChart.scale.yCenter +  size *  Math.sin(0));
+	for (var i = 0; i < vertexes.length; i++) {
+		bgCtx.lineTo(vertexes[i][0], vertexes[i][1]);
+	}
+	// bgCtx.strokeStyle = "rgba(43, 123, 251, 1)";
+	bgCtx.fillStyle = "rgba(43, 123, 251, 0.25)";
+	bgCtx.lineWidth = 1;
+	bgCtx.stroke();
+	bgCtx.fill();
+
+</script>
+
 
 <!-- Footer -->
 <footer class="footer">
