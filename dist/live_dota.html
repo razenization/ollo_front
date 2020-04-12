@@ -11,7 +11,7 @@
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <meta name="google" content="notranslate">
     <meta name="format-detection" content="telephone=no">
@@ -79,9 +79,8 @@
 			
 			<div class="row">
 				<div class="col-xl-9 col-lg-8">
-					<div class="match__main-info-live">
-						<div class="match__team-live">
-							<img src="assets/img/util/game-logo/ct-logo.svg" alt="" class="match__team-bg">
+					<div class="match__main-info  live">
+						<div class="match__team">
 							<div class="match__team-preview">
 								<p class="match__team-name">Vitality</p>
 								<div class="match__img-full">
@@ -138,8 +137,7 @@
 								<p class="live-match__data-timeleft-wrapper">МАТЧ В <span class="match__data-live">LIVE</span>!</p>
 							</div>
 						</div>
-						<div class="match__team-live" >
-							<img src="assets/img/util/game-logo/t-logo.svg" alt="" class="match__team-bg">
+						<div class="match__team">
 							<div class="match__team-preview">
 								<div class="match__img-full">
 									<img src="assets/img/teams/spirit/logo.svg" alt="" class="match__team-img">
@@ -150,35 +148,35 @@
 							<div class="match__team-players">
 								<div class="match__team-players-item">
 									<div class="player__img-wrapper">
-										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img">
+										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img  unknown">
 										<a href="#" class="player__link">Профиль</a>
 									</div>
 									<p class="player__nick">?</p>
 								</div>
 								<div class="match__team-players-item">
 									<div class="player__img-wrapper">
-										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img">
+										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img  unknown">
 										<a href="#" class="player__link">Профиль</a>
 									</div>
 									<p class="player__nick">?</p>
 								</div>
 								<div class="match__team-players-item">
 									<div class="player__img-wrapper">
-										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img">
+										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img  unknown">
 										<a href="#" class="player__link">Профиль</a>
 									</div>
 									<p class="player__nick">?</p>
 								</div>
 								<div class="match__team-players-item">
 									<div class="player__img-wrapper">
-										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img">
+										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img  unknown">
 										<a href="#" class="player__link">Профиль</a>
 									</div>
 									<p class="player__nick">?</p>
 								</div>
 								<div class="match__team-players-item">
 									<div class="player__img-wrapper">
-										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img">
+										<img src="assets/img/util/dummies/player-logo.svg" alt="" class="player__img  unknown">
 										<a href="#" class="player__link">Профиль</a>
 									</div>
 									<p class="player__nick">?</p>
@@ -220,7 +218,7 @@
 
 					<div class="live__stats">
 						<div class="row">
-							<div class="col-9">
+							<div class="col-xl-9 col-lg-8 col-xs-12">
 								<div class="nw__wrapper">
 									<div class="nw__header-wrapper">
 										<p class="nw__header">Разница в networth команд</p>
@@ -237,356 +235,327 @@
 									</div>
 									<div class="nw">
 										<div class="nw-inner">
-											<canvas id="nw-chart" responsive="true"></canvas>
+											<canvas id="nw-chart"></canvas>
+											<!-- <canvas id="nw-chart" height="183"></canvas> -->
 										</div>
 									</div>
 								</div>
 							</div> <!-- ./col-9 -->
-							<div class="col-3">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
 								<div class="map">
 									<canvas id="canvas" width="250" height="250"></canvas>
 								</div>
 							</div> <!-- ./col-3 -->
+							<div class="col-lg-12 col-md-8 col-sm-12">
+								<div class="live__overview">
+									<div class="row">
+										<div class="col-lg-6 col-md-12">
+											<div class="live__overview-team">
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-hero">
+														</div>
+								
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/pudge.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/crystal-maiden.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+											</div>
+										</div>
+								
+										<div class="col-lg-6 col-md-12">
+											<div class="live__overview-team">
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/pudge.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+														<!-- <div class="live__overview-banned-wrapper">
+															<div class="live__overview-banned-inner">
+																<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+															</div>
+														</div> -->
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+														</div>
+														<!-- <div class="live__overview-banned-wrapper">
+															<div class="live__overview-banned-inner">
+																<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+															</div>
+														</div> -->
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/crystal-maiden.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-banned">
+														</div>
+														<!-- <div class="live__overview-banned-wrapper">
+															<div class="live__overview-banned-inner">
+																<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+															</div>
+														</div> -->
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+												<div class="live__overview-player">
+													<p class="live__overview-nick">shox</p>
+													<div class="live__overview-heroes-wrapper">
+														<div class="live__overview-picked">
+															<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-hero">
+														</div>
+														
+														<div class="live__overview-heroban">
+															<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-banned">
+														</div>
+														<!-- <div class="live__overview-banned-wrapper">
+															<div class="live__overview-banned-inner">
+																<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
+															</div>
+														</div> -->
+													</div>
+								
+													<div class="live__overview-player-items">
+														<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
+														<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
+													</div>
+													<div class="live__overview-player-stats">
+														<span class="live__overview-player-kills"><b>K </b><span class="live__overview-player-kills-inner">65</span></span>
+														<span class="live__overview-player-deaths"><b>D </b><span class="live__overview-player-deaths-inner">15</span></span>
+														<span class="live__overview-player-assists"><b>A </b><span class="live__overview-player-assists-inner">40</span></span>
+													</div>
+													<div class="live__overview-player-nw">5671</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>							</div>
 						</div> <!-- ./row -->
 					</div> <!-- ./live__stats -->
 
-					<div class="live__overview">
-						<div class="row">
-							<div class="col-6">
-								<div class="live__overview-team">
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/pudge.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/crystal-maiden.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-6">
-								<div class="live__overview-team">
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/pudge.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/crystal-maiden.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-									<div class="live__overview-player">
-										<p class="live__overview-nick">shox</p>
-										<div class="live__overview-heroes-wrapper">
-											<div class="live__overview-picked">
-												<img src="assets/img/dota-heroes/shadow-fiend.svg" class="live__overview-hero">
-											</div>
-											
-											<div class="live__overview-heroban">
-												<img src="assets/img/dota-heroes/juggernaut.svg" class="live__overview-banned">
-											</div>
-											<!-- <div class="live__overview-banned-wrapper">
-												<div class="live__overview-banned-inner">
-													<img src="assets/img/dota-heroes/faceless-void.svg" class="live__overview-banned">
-												</div>
-											</div> -->
-										</div>
-
-										<div class="live__overview-player-items">
-											<img src="assets/img/dota-items/rapier.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/desolator.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/salve.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/silver-edge.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/blademail.svg" alt="" class="live__overview-player-item">
-											<img src="assets/img/dota-items/phase-boots.svg" alt="" class="live__overview-player-item">
-										</div>
-										<div class="live__overview-player-stats">
-											<b>K </b><span class="live__overview-player-kills">65</span>
-											<b>D </b><span class="live__overview-player-deaths">15</span>
-											<b>A </b><span class="live__overview-player-assists">40</span>
-										</div>
-										<div class="live__overview-player-nw">5671</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="stats__preview">
 						<div class="row">
-							<div class="col-9">
+							<div class="col-xl-9 col-lg-8">
 								<div class="team__stats-wrapper">
 									<!-- <div class="row"> -->
 										<!-- <div class="col-6"> -->
@@ -655,48 +624,9 @@
 													<img src="assets/img/teams/spirit/logo.svg" alt="" class="team__stats-logo">
 												</div>
 											</div>
-											<!-- </div> -->
-											<!-- <div class="col-6"> -->
-											<!-- <div class="team__stats">
-												<img src="assets/img/teams/spirit/logo.svg" alt="" class="team__stats-logo">
-												<div class="team__stats-content">
-													<div class="team__stats-option">
-														<div class="option__estimate-wrapper">
-															<div class="option__estimate"></div>
-														</div>
-														<p class="option__header">Winrate</p>
-													</div>
-													<div class="team__stats-option">
-														<div class="option__estimate-wrapper">
-															<div class="option__estimate"></div>
-														</div>
-														<p class="option__header">FB</p>
-													</div>
-													<div class="team__stats-option">
-														<div class="option__estimate-wrapper">
-															<div class="option__estimate"></div>
-														</div>
-														<p class="option__header">F10</p>
-													</div>
-													<div class="team__stats-option">
-														<div class="option__estimate-wrapper">
-															<div class="option__estimate"></div>
-														</div>
-														<p class="option__header">Win when FB</p>
-													</div>
-													<div class="team__stats-option">
-														<div class="option__estimate-wrapper">
-															<div class="option__estimate"></div>
-														</div>
-														<p class="option__header">Win when F10</p>
-													</div>
-												</div>
-											</div> -->
-											<!-- </div> -->
-											<!-- </div> -->
 										</div>
 									</div>
-									<div class="col-3">
+									<div class="col-xl-3 col-lg-4">
 										<div class="avg__stats-wrapper">
 											<div class="row">
 												<div class="col-6">
@@ -710,16 +640,14 @@
 															</div>
 															<div class="maps__played-option">
 																<div class="option__estimate-wrapper  smaller">
-																	<div class="option__estimate"></div>
+																	<div class="option__estimate  weaker"></div>
 																</div>
 															</div>
 														</div>
 														<div class="canvas-holder">
 															<canvas id="avg-kills-chart" width="100" height="100"></canvas>
+															<!-- <div class="dial__tooltip">Stats here</div> -->
 														</div>
-														<!-- <div class="dial" data-percent="80" data-lineWidth="20">
-															<div class="dial__tooltip">Stats here</div>
-														</div> -->
 													</div>
 												</div>
 												<div class="col-6">
@@ -728,7 +656,7 @@
 														<div class="time__avg-content">
 															<div class="time__avg-option">
 																<div class="option__estimate-wrapper  smaller">
-																	<div class="option__estimate"></div>
+																	<div class="option__estimate  weaker"></div>
 																</div>
 															</div>
 															<div class="time__avg-option">
@@ -739,10 +667,8 @@
 														</div>
 														<div class="canvas-holder">
 															<canvas id="avg-deaths-chart" width="100" height="100"></canvas>
+															<!-- <div class="dial__tooltip">Stats here</div> -->
 														</div>
-														<!-- <div class="dial" data-percent="80" data-lineWidth="20">
-															<div class="dial__tooltip">Stats here</div>
-														</div> -->
 													</div>
 												</div>
 											</div>
@@ -753,60 +679,67 @@
 					<div class="comments">
 						<div class="comments__container">
 							<div class="comments-item  purple">
-								<div class="author-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
-								</div>
-								<div class="comment__body">
-									<p class="author-nick">Amaterasu</p>
-									<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-									<p class="comment-timestamp">2020-03-17 16:02</p>
-								</div>
-								<a href="#" class="comment-reply"></a>
-							</div> <!-- ./comments-item -->
-							<div class="comment-replies">
-								<div class="comments-item">
+								<div class="comment__wrapper">
 									<div class="author-img-wrapper">
 										<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
 									</div>
 									<div class="comment__body">
 										<p class="author-nick">Amaterasu</p>
 										<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-										<p class="comment-timestamp"></p>
+										<p class="comment-timestamp">2020-03-17 16:02</p>
+									</div>
+								</div>
+								<a href="#" class="comment-reply"></a>
+							</div> <!-- ./comments-item -->
+							<div class="comment-replies">
+								<div class="comments-item">
+									<div class="comment__wrapper">
+										<div class="author-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
+										</div>
+										<div class="comment__body">
+											<p class="author-nick">Amaterasu</p>
+											<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+											<p class="comment-timestamp"></p>
+										</div>
 									</div>
 									<a href="#" class="comment-reply"></a>
 								</div> <!-- ./comments-item -->
 							</div>
 							<div class="comments-item  red">
-								<div class="author-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
-								</div>
-								<div class="comment__body">
-									<p class="author-nick">Amaterasu</p>
-									<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-									<p class="comment-timestamp">2020-03-17 16:02</p>
+								<div class="comment__wrapper">
+									<div class="author-img-wrapper">
+										<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
+									</div>
+									<div class="comment__body">
+										<p class="author-nick">Amaterasu</p>
+										<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										<p class="comment-timestamp">2020-03-17 16:02</p>
+									</div>
 								</div>
 								<a href="#" class="comment-reply"></a>
 							</div> <!-- ./comments-item -->
 							<div class="comments-item  green">
-								<div class="author-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
-								</div>
-								<div class="comment__body">
-									<p class="author-nick">Amaterasu</p>
-									<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-									<p class="comment-timestamp">2020-03-17 16:02</p>
+								<div class="comment__wrapper">
+									<div class="author-img-wrapper">
+										<img src="assets/img/util/dummies/author-img.svg" alt="" class="author-img">
+									</div>
+									<div class="comment__body">
+										<p class="author-nick">Amaterasu</p>
+										<p class="comment-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										<p class="comment-timestamp">2020-03-17 16:02</p>
+									</div>
 								</div>
 								<a href="#" class="comment-reply"></a>
 							</div> <!-- ./comments-item -->
 						</div> <!-- ./comments__container -->
-
+					
 						<form action="/" id="comment__form">
 							<input type="text" id="leave__comment" name="input__comment-text" placeholder="Выскажи своё мнение здесь...">
 							<!-- <textarea name="input__comment-text" id="leave__comment" placeholder="Выскажи своё мнение здесь..."></textarea> -->
 							<button type="submit" id="submit__comment"></button>
 						</form>
-					</div> <!-- ./comments -->
-				</div> <!-- ./col-89 -->
+					</div> <!-- ./comments -->				</div> <!-- ./col-89 -->
 
 				<div class="col-xl-3 col-lg-4">
 					<div class="live__matches">
@@ -1035,197 +968,9 @@
 
 <script type="text/javascript" src="assets/other/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="assets/other/prematch.js"></script>
-<script src="assets/other/Chart.min.js"></script>
 <script src="assets/other/map.js"></script>
-<script>
-	var canvas = document.getElementById('nw-chart');
-	var nwChart = new Chart(canvas, {
-		type: 'line',
-		data: {
-			labels: ['1', '2', '3', '4', '5'],
-			datasets: [{
-				// fillColor : 'linear-gradient(rgba(43, 123, 251, 0.1) 0%, rgba(255, 255, 255, 0) 135.16%)',
-				fillColor : '#2B7BFB',
-				label: 'Networth',
-				data: [2700, -5000, 5780, 5162, 5112],
-				backgroundColor: 'rgba(43, 123, 251, 0.2)',
-				borderColor: '#2B7BFB',
-				borderWidth: '1',
-			}]
-		},
-		options: {
-			elements: {
-				point:{
-					radius: 3
-				}
-			},
-			maintainAspectRatio: false,
-			scales: {
-				xAxes: [{
-					gridLines: {
-						display:false
-					}
-				}],
-				yAxes: [{
-					gridLines: {
-						color: "transparent",
-						display: true,
-						drawBorder: false,
-						zeroLineColor: "#ccc",
-						zeroLineWidth: 1
-					},
-					ticks: {
-						max: 10000,
-						min: -10000
-					}
-				}]
-			}
-		}
-	});
-
-	var avgKillsCanvas = document.getElementById('avg-kills-chart');
-	var avgKillsChart = new Chart(avgKillsCanvas, {
-		type: 'doughnut',
-		data: {
-			datasets: [{
-				data: [
-				80,
-				20,
-				],
-				backgroundColor: [
-				'#E74C3C',
-				'#3D4274',
-				],
-				label: 'Dataset 1'
-			}],
-			labels: [
-			'Vitality',
-			'Spirit',
-			]
-		},
-		options: {
-			maintainAspectRatio: false,
-			responsive: false,
-			cutoutPercentage: 60,
-			legend: {
-				display: false
-			},
-			animation: {
-				animateScale: true,
-				animateRotate: true
-			},
-			elements: {
-				center: {
-					text: 'Avg Kills',
-					subtext: 'per map',
-					color: '#000', //Default black
-					fontStyle: 'Inter', //Default Arial
-					sidePadding: 15 //Default 20 (as a percentage)
-				}
-			}
-		}
-	});
-
-	var avgDeathsCanvas = document.getElementById('avg-deaths-chart');
-	var avgDeathsChart = new Chart(avgDeathsCanvas, {
-		type: 'doughnut',
-		data: {
-			datasets: [{
-				data: [
-				80,
-				20,
-				],
-				backgroundColor: [
-				'#E74C3C',
-				'#3D4274',
-				],
-				label: 'Dataset 1'
-			}],
-			labels: [
-			'Vitality',
-			'Spirit',
-			]
-		},
-		options: {
-			responsive: true,
-			cutoutPercentage: 60,
-			legend: {
-				display: false
-			},
-			animation: {
-				animateScale: true,
-				animateRotate: true
-			},
-			elements: {
-				center: {
-					text: 'Avg Deaths',
-					subtext: 'per map',
-					color: '#000', //Default black
-					fontStyle: 'Inter', //Default Arial
-					sidePadding: 15 //Default 20 (as a percentage)
-				}
-			}
-		}
-	});
-
-	Chart.pluginService.register({
-		beforeDraw: function (chart) {
-			if (chart.config.options.elements.center) {
-			//Get ctx from string
-			var ctx = chart.chart.ctx;
-
-			//Get options from the center object in options
-			var centerConfig = chart.config.options.elements.center;
-			var fontStyle = centerConfig.fontStyle || 'Arial';
-			var txt = centerConfig.text;
-			var subtxt = centerConfig.subtext;
-			var color = centerConfig.color || '#000';
-			var sidePadding = centerConfig.sidePadding || 20;
-			var sidePaddingCalculated = (sidePadding/100) * (chart.innerRadius * 2)
-			//Start with a base font of 30px
-			ctx.font = "30px " + fontStyle;
-
-			//Get the width of the string and also the width of the element minus 10 to give it 5px side padding
-			var stringWidth = ctx.measureText(txt).width;
-			var subStringWidth = ctx.measureText(subtxt).width;
-
-			var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
-
-
-			// Find out how much the font can grow in width.
-			var widthRatio = elementWidth / stringWidth;
-			// var newFontSize = Math.floor(30 * widthRatio);
-			var newFontSize = 10;
-
-			var subWidthRatio = elementWidth / subStringWidth;
-			var newSubFontSize = Math.floor(22 * subWidthRatio);
-
-			var elementHeight = (chart.innerRadius * 2);
-
-			// Pick a new font size so it will not be larger than the height of label.
-			var fontSizeToUse = Math.min(newFontSize, elementHeight);
-			var subFontSizeToUse = Math.min(newSubFontSize, elementHeight);
-
-			//Set font settings to draw it correctly.
-			ctx.textAlign = 'center';
-			ctx.textBaseline = 'middle';
-			var posX = ((chart.chartArea.left + chart.chartArea.right) / 2);
-			var posY = ((chart.chartArea.top + chart.chartArea.bottom) / 2.1);
-			ctx.font = fontSizeToUse+ "px " + fontStyle;
-			ctx.fillStyle = color;
-
-			//Draw text in center
-			ctx.fillText(txt, posX, posY);
-
-			var posX = ((chart.chartArea.left + chart.chartArea.right) / 2);
-			var posY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.72);
-
-			ctx.font = subFontSizeToUse + "px " + fontStyle;
-			ctx.fillText(subtxt, posX, posY);
-		}
-	}
-});
-</script>
+<script src="assets/other/Chart.min.js"></script>
+<script src="assets/other/charts.js"></script>
 
 <!-- Footer -->
 <footer class="footer">

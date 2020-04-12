@@ -34,6 +34,11 @@
 				$(this).parents('.stats__switcher-choices').removeClass('hover');
 			});
 
+		document.body.onclick = function () {
+			$('.mutual__bg, .stats__bg').removeClass('active');
+			$('.stats__switcher-choices, .mutual__switcher-choices').removeClass('hover');
+		};
+
 		// Custom selectbox script (modified)
 		x = document.getElementsByClassName("custom-select");
 		for (i = 0; i < x.length; i++) {
