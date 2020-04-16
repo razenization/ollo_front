@@ -69,13 +69,28 @@
 		});
 
 		$('.sidenav__option.sub').hover(function () {
-			$(this).find('.sidenav__subnav').stop().animate({
-				'right': -$(this).find('.sidenav__subnav').width()
-			}, 200);
+			if (window.matchMedia("(max-width: 540px)").matches) {
+				$(this).find('.sidenav__subnav').stop().animate({
+					'bottom': -$(this).find('.sidenav__subnav').height()
+				}, 200);
+			} else {
+			  	$(this).find('.sidenav__subnav').stop().animate({
+					'right': -$(this).find('.sidenav__subnav').width()
+				}, 200);
+			}
+			// $(this).find('.sidenav__subnav').stop().animate({
+			// 	'right': -$(this).find('.sidenav__subnav').width()
+			// }, 200);
 		}, function () {
-			$(this).find('.sidenav__subnav').stop().animate({
-				'right': '0'
-			}, 200);
+			if (window.matchMedia("(max-width: 540px)").matches) {
+			  	$(this).find('.sidenav__subnav').stop().animate({
+					'bottom': 0
+				}, 200);
+			} else {
+			  	$(this).find('.sidenav__subnav').stop().animate({
+					'right': 0
+				}, 200);
+			}
 		});
 
 		$('.hide__button').click(function (e) {
@@ -88,8 +103,17 @@
 				parentEl = curEl.parent();
 				minHeight = '50';
 			}
+
 			if (!curEl.inAnimation) {
 				curEl.inAnimation = true;
+
+				let optional;
+				if (parentEl.attr('class').indexOf("mutual") > -1) {
+					optional = '.mutual__matches-overall';
+					minHeight = '150';
+					console.log(minHeight);
+				}
+				console.log(optional);
 				if (curEl.hasClass('closed')) {
 					parentEl.animate({'height': curEl.data('baseHeight')}, 300);
 					setTimeout(function () {
@@ -97,7 +121,7 @@
 							'padding': curEl.data('basePadding'),
 							'margin': curEl.data('baseMargin'),
 						});
-						parentEl.children().not(curEl.parent()).not(curEl).not('p').each(function () {
+						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
 							$(this).css({'display': $(this).data('baseDisplay')});
 						});
 						// parentEl.children('p[class*=latest]').hide();
@@ -112,11 +136,10 @@
 						'basePadding': parentEl.css('padding'),
 						'baseMargin': parentEl.css('margin'),
 					});
-					curEl.basePadding = parentEl.css('padding');
-					curEl.baseMargin = parentEl.css('margin');
 					parentEl.animate({'height': minHeight}, 300);
 					setTimeout(function () {
-						parentEl.children().not(curEl.parent()).not(curEl).not('p').each(function () {
+						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
+							console.log(this);
 							$(this).data('baseDisplay', $(this).css('display'));
 							$(this).css({'display': 'none'});
 						})

@@ -222,7 +222,6 @@
 			bgCtx.stroke();
 			bgCtx.fill();
 
-			console.log(vertexes);
 			bgCtx.beginPath();
 			bgCtx.strokeStyle = "#fff";
 			bgCtx.lineWidth = 3;

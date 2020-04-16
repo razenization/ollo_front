@@ -142,9 +142,5 @@
 
 			// if (lineRound == true && lineWidth < width) context.lineCap = "round";
 		}
-
-		var a = ['dog', 'cat', 'gogo'];
-		a[100] = 'fox';
-		console.log(a.length);
 	});
 })(jQuery);
