@@ -109,6 +109,10 @@
 				<a class="sidenav__delim-inner  additional" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
 			</div>
 		</div>
+		<div class="sidenav__stats">
+			<span class="sidenav__stats-live-stat">Матчей в LIVE: <span class="sidenav__stats-live-count">27</span></span>
+			<span class="sidenav__stats-quality  high">Качество игр:</span>
+		</div>
 	</div>
 </div>
 <!-- Page content -->
@@ -124,9 +128,12 @@
 							<img src="assets/img/util/game-logo/ct-logo.svg" alt="" class="match__team-bg">
 							<div class="match__team-preview">
 								<p class="match__team-name">Vitality</p>
-								<div class="match__img-full">
-									<img src="assets/img/teams/vitality/logo.svg" alt="" class="match__team-img">
-									<div class="match__team-country"><img src="assets/img/flags/ru.svg" alt="" class="match__team-flag"></div>
+								<div class="match__team-logo-score">
+									<div class="match__img-full">
+										<img src="assets/img/teams/vitality/logo.svg" alt="" class="match__team-img">
+										<div class="match__team-country"><img src="assets/img/flags/ru.svg" alt="" class="match__team-flag"></div>
+									</div>
+									<span class="match__team-score">15</span>
 								</div>
 							</div>
 							<div class="match__team-players">
@@ -167,23 +174,28 @@
 								</div>
 							</div> <!-- ./match__team-players -->
 						</div> <!-- ./match__team -->
-						<div class="match__data">
-							<p class="match__data-header">ESL Pro League Season 11 Europe</p>
-							<div class="match__data-timestamp">
-								<p class="match__data-time">15:00<span class="match__data-bestof">BO3</span></p>
-								<p class="match__data-date">25.04.2020</p>
-							</div>
-							<div class="match__data-other">
-								<p class="match__data-online">Online</p>
-								<p class="live-match__data-timeleft-wrapper">МАТЧ В <span class="match__data-live">LIVE</span>!</p>
+						<div class="match__data-wrapper">
+							<div class="match__data">
+								<p class="match__data-header">ESL Pro League Season 11 Europe</p>
+								<div class="match__data-timestamp">
+									<p class="match__data-time">15:00<span class="match__data-bestof">BO3</span></p>
+									<p class="match__data-date">25.04.2020</p>
+								</div>
+								<div class="match__data-other">
+									<p class="match__data-online">Online</p>
+									<p class="live-match__data-timeleft-wrapper">МАТЧ В <span class="match__data-live">LIVE</span>!</p>
+								</div>
 							</div>
 						</div>
 						<div class="match__team" >
 							<img src="assets/img/util/game-logo/t-logo.svg" alt="" class="match__team-bg">
 							<div class="match__team-preview">
-								<div class="match__img-full">
-									<img src="assets/img/teams/spirit/logo.svg" alt="" class="match__team-img">
-									<div class="match__team-country"><img src="assets/img/flags/ru.svg" alt="" class="match__team-flag"></div>
+								<div class="match__team-logo-score">
+									<span class="match__team-score">15</span>
+									<div class="match__img-full">
+										<img src="assets/img/teams/spirit/logo.svg" alt="" class="match__team-img">
+										<div class="match__team-country"><img src="assets/img/flags/ru.svg" alt="" class="match__team-flag"></div>
+									</div>
 								</div>
 								<p class="match__team-name">Spirit</p>
 							</div>
@@ -229,7 +241,6 @@
 
 					<div class="media">
 						<p class="media__header">Прямая трансляция</p>
-						<div class="stream__block">
 							<div class="match__streams">
 								<div class="stream__option  selected">
 									<img src="assets/img/util/flags/ru-flag.svg" alt="" class="stream__option-flag">
@@ -266,7 +277,6 @@
 								scrolling="no"
 								allowfullscreen="true"></iframe>
 							</div>
-						</div>
 					</div>
 
 					<div class="match__logs">
@@ -1193,132 +1203,277 @@
 							</div>
 						</div> <!-- ./live__matches-item -->
 					</div> <!-- ./live__matches -->
-					<div class="bookies__calculator">
-						<div class="bookies__table-wrapper">
-							<table class="bookie__calculator-coef">
-								<tr>
-									<th class="coef__header">Коэффициенты</th>
-									<th class="team__header">Vitality</th>
-									<th class="team__header">Spirit</th>
-								</tr>
-								<tr>
-									<td class="bookie"><img src="assets/img/bookies/ggbet.svg" alt="" class="bookie-img"></td>
-									<td class="calc__kf  higher">2.20</td>
-									<td class="calc__kf">1.63</td>
-								</tr>
-								<tr>
-									<td class="bookie"><img src="assets/img/bookies/1xstavka.svg" alt="" class="bookie-img"></td>
-									<td class="calc__kf  higher">2.20</td>
-									<td class="calc__kf">1.63</td>
-								</tr>
-								<tr>
-									<td class="bookie"><img src="assets/img/bookies/parimatch.svg" alt="" class="bookie-img"></td>
-									<td class="calc__kf  higher">2.20</td>
-									<td class="calc__kf">1.63</td>
-								</tr>
-								<tr>
-									<td class="bookie"><img src="assets/img/bookies/bingoboom.svg" alt="" class="bookie-img"></td>
-									<td class="calc__kf  higher">2.20</td>
-									<td class="calc__kf">1.63</td>
-								</tr>
-								<tr>
-									<td class="bookie"><img src="assets/img/bookies/betcity.svg" alt="" class="bookie-img"></td>
-									<td class="calc__kf  higher">2.20</td>
-									<td class="calc__kf">1.63</td>
-								</tr>
-							</table> <!-- ./bookie__calculator-coef -->
-						</div> <!-- ./bookies__table-wrapper -->					</div> <!-- ./bookie__calculator -->
-
-					<div class="chat__box">
-						<div class="chat__messages">
-							<div class="chat__messages-item  purple">
-								<div class="chat-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-								</div>
-								<div class="message__body">
-									<p class="chat-nick">Amaterasu</p>
-									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-								</div>
-							</div> <!-- ./chat__messages-item -->
-							<div class="chat__messages-item  red">
-								<div class="chat-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-								</div>
-								<div class="message__body">
-									<p class="chat-nick">Amaterasu</p>
-									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-								</div>
-							</div> <!-- ./chat__messages-item -->
-							<div class="chat__messages-item  green">
-								<div class="chat-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-								</div>
-								<div class="message__body">
-									<p class="chat-nick">Amaterasu</p>
-									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-								</div>
-							</div> <!-- ./chat__messages-item -->
-							<div class="chat__messages-item  purple">
-								<div class="chat-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-								</div>
-								<div class="message__body">
-									<p class="chat-nick">Amaterasu</p>
-									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-								</div>
-							</div> <!-- ./chat__messages-item -->
-							<div class="chat__messages-item  purple right">
-								<div class="message__body">
-									<p class="chat-nick">Amaterasu</p>
-									<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-								</div>
-								<div class="chat-img-wrapper">
-									<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-								</div>
-							</div> <!-- ./chat__messages-item -->
+					<div class="row">
+						<div class="col-lg-12 col-md-6">
+							<div class="bookies__calculator">
+								<div class="bookies__table-wrapper">
+									<table class="bookie__calculator-coef">
+										<tr>
+											<th class="coef__header">Коэффициенты</th>
+											<th class="team__header">Vitality</th>
+											<th class="team__header">Spirit</th>
+										</tr>
+										<tr>
+											<td class="bookie"><img src="assets/img/bookies/ggbet.svg" alt="" class="bookie-img"></td>
+											<td class="calc__kf  higher">2.20</td>
+											<td class="calc__kf">1.63</td>
+										</tr>
+										<tr>
+											<td class="bookie"><img src="assets/img/bookies/1xstavka.svg" alt="" class="bookie-img"></td>
+											<td class="calc__kf  higher">2.20</td>
+											<td class="calc__kf">1.63</td>
+										</tr>
+										<tr>
+											<td class="bookie"><img src="assets/img/bookies/parimatch.svg" alt="" class="bookie-img"></td>
+											<td class="calc__kf  higher">2.20</td>
+											<td class="calc__kf">1.63</td>
+										</tr>
+										<tr>
+											<td class="bookie"><img src="assets/img/bookies/bingoboom.svg" alt="" class="bookie-img"></td>
+											<td class="calc__kf  higher">2.20</td>
+											<td class="calc__kf">1.63</td>
+										</tr>
+										<tr>
+											<td class="bookie"><img src="assets/img/bookies/betcity.svg" alt="" class="bookie-img"></td>
+											<td class="calc__kf  higher">2.20</td>
+											<td class="calc__kf">1.63</td>
+										</tr>
+									</table> <!-- ./bookie__calculator-coef -->
+								</div> <!-- ./bookies__table-wrapper -->							</div> <!-- ./bookie__calculator -->
 						</div>
-						<form action="/" id="chat__form">
-							<input type="text" id="send__message" name="send__message-text" placeholder="Выскажи своё мнение здесь...">
-							<!-- <textarea name="input__comment-text" id="leave__comment" placeholder="Выскажи своё мнение здесь..."></textarea> -->
-							<button type="submit" id="submit__message"></button>
-						</form>
+						
+						<div class="col-lg-12 col-md-6">
+							<div class="chat__box">
+								<div class="chat__messages">
+									<div class="chat__messages-item  purple  verified  staff">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  red">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  green  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  green  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  purple">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  purple right">
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  blue  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+								</div>
+								<form action="/" id="chat__form">
+									<input type="text" id="send__message" name="send__message-text" placeholder="Выскажи своё мнение здесь...">
+									<!-- <textarea name="input__comment-text" id="leave__comment" placeholder="Выскажи своё мнение здесь..."></textarea> -->
+									<button type="submit" id="submit__message"></button>
+								</form>
+							</div>						</div>
 					</div>
+
 					<div class="best__bookies">
 						<p class="best__bookies-header">Лучшие букмекеры от «OLLO»</p>
-						<div class="best__bookies__table-wrapper">
 							<table class="best__bookies__table">
-								<tr class="best__bokies__tablerow">
-									<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
+								<tr class="best__bokies__tablerow our-top">
+									<td class="best__bookie-logo">
+										<div class="best__bookie-logo-wrapper">
+											<a href="#" class="best__bookie-logo-link">
+												<img src="assets/img/bookies/ggbet.svg" alt="">
+											</a>
+										</div>
+									</td>
 									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-									<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-									<td class="best__bookie-link"><a href="#">Перейти</a></td>
+									<td class="best__bookie-bonus">
+										<div class="best__bookie-bonus-wrapper">
+											<p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p>
+										</div>
+									</td>
+									<td class="best__bookie-link">
+										<div class="best__bookie-link-wrapper">
+											<a href="" class="best__bookie-link-inner">
+												<img src="assets/img/icons/best/planet.svg" alt="" class="best__bookie-link-icon">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-feed">
+										<div class="best__bookie-feed-wrapper">
+											<a href="" class="best__bookie-feed-inner">
+												<img src="assets/img/icons/best/doc.svg" alt="" class="best__bookie-feed-icon">
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr class="best__bokies__tablerow user-top">
+									<td class="best__bookie-logo">
+										<div class="best__bookie-logo-wrapper">
+											<a href="#" class="best__bookie-logo-link">
+												<img src="assets/img/bookies/parimatch.svg" alt="">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
+									<td class="best__bookie-bonus">
+										<div class="best__bookie-bonus-wrapper">
+											<p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p>
+										</div>
+									</td>
+									<td class="best__bookie-link">
+										<div class="best__bookie-link-wrapper">
+											<a href="" class="best__bookie-link-inner">
+												<img src="assets/img/icons/best/planet.svg" alt="" class="best__bookie-link-icon">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-feed">
+										<div class="best__bookie-feed-wrapper">
+											<a href="" class="best__bookie-feed-inner">
+												<img src="assets/img/icons/best/doc.svg" alt="" class="best__bookie-feed-icon">
+											</a>
+										</div>
+									</td>
 								</tr>
 								<tr class="best__bokies__tablerow">
-									<td class="best__bookie-logo"><img src="assets/img/bookies/parimatch.svg" alt=""></td>
+									<td class="best__bookie-logo">
+										<div class="best__bookie-logo-wrapper">
+											<a href="#" class="best__bookie-logo-link">
+												<img src="assets/img/bookies/ggbet.svg" alt="">
+											</a>
+										</div>
+									</td>
 									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-									<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-									<td class="best__bookie-link"><a href="#">Перейти</a></td>
+									<td class="best__bookie-bonus  exclusive">
+										<div class="best__bookie-bonus-wrapper">
+											<p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p>
+											<span class="exclusive-text">ЭКСКЛЮЗИВ</span>
+										</div>
+									</td>
+									<td class="best__bookie-link">
+										<div class="best__bookie-link-wrapper">
+											<a href="" class="best__bookie-link-inner">
+												<img src="assets/img/icons/best/planet.svg" alt="" class="best__bookie-link-icon">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-feed">
+										<div class="best__bookie-feed-wrapper">
+											<a href="" class="best__bookie-feed-inner">
+												<img src="assets/img/icons/best/doc.svg" alt="" class="best__bookie-feed-icon">
+											</a>
+										</div>
+									</td>
 								</tr>
 								<tr class="best__bokies__tablerow">
-									<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
+									<td class="best__bookie-logo">
+										<div class="best__bookie-logo-wrapper">
+											<a href="#" class="best__bookie-logo-link">
+												<img src="assets/img/bookies/parimatch.svg" alt="">
+											</a>
+										</div>
+									</td>
 									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-									<td class="best__bookie-bonus  exclusive"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-									<td class="best__bookie-link"><a href="#">Перейти</a></td>
+									<td class="best__bookie-bonus">
+										<div class="best__bookie-bonus-wrapper">
+											<p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p>
+										</div>
+									</td>
+									<td class="best__bookie-link">
+										<div class="best__bookie-link-wrapper">
+											<a href="" class="best__bookie-link-inner">
+												<img src="assets/img/icons/best/planet.svg" alt="" class="best__bookie-link-icon">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-feed">
+										<div class="best__bookie-feed-wrapper">
+											<a href="" class="best__bookie-feed-inner">
+												<img src="assets/img/icons/best/doc.svg" alt="" class="best__bookie-feed-icon">
+											</a>
+										</div>
+									</td>
 								</tr>
 								<tr class="best__bokies__tablerow">
-									<td class="best__bookie-logo"><img src="assets/img/bookies/parimatch.svg" alt=""></td>
+									<td class="best__bookie-logo">
+										<div class="best__bookie-logo-wrapper">
+											<a href="#" class="best__bookie-logo-link">
+												<img src="assets/img/bookies/ggbet.svg" alt="">
+											</a>
+										</div>
+									</td>
 									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-									<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-									<td class="best__bookie-link"><a href="#">Перейти</a></td>
-								</tr>
-								<tr class="best__bokies__tablerow">
-									<td class="best__bookie-logo"><img src="assets/img/bookies/ggbet.svg" alt=""></td>
-									<td class="best__bookie-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></td>
-									<td class="best__bookie-bonus"><p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p></td>
-									<td class="best__bookie-link"><a href="#">Перейти</a></td>
+									<td class="best__bookie-bonus">
+										<div class="best__bookie-bonus-wrapper">
+											<p><i class="fas fa-gift"></i> 5.000 <i class="fas fa-ruble-sign"></i></p>
+										</div>
+									</td>
+									<td class="best__bookie-link">
+										<div class="best__bookie-link-wrapper">
+											<a href="" class="best__bookie-link-inner">
+												<img src="assets/img/icons/best/planet.svg" alt="" class="best__bookie-link-icon">
+											</a>
+										</div>
+									</td>
+									<td class="best__bookie-feed">
+										<div class="best__bookie-feed-wrapper">
+											<a href="" class="best__bookie-feed-inner">
+												<img src="assets/img/icons/best/doc.svg" alt="" class="best__bookie-feed-icon">
+											</a>
+										</div>
+									</td>
 								</tr>
 							</table>
-						</div>
 						<a href="#" class="hide__button"></a>
 					</div>					
 					<div class="skin__ad">
@@ -1337,6 +1492,7 @@
 <script type="text/javascript" src="assets/other/prematch.js"></script>
 <script src="assets/other/Chart.min.js"></script>
 <script src="assets/other/charts.js"></script>
+<script src="assets/other/live-swap.js"></script>
 
 <!-- Footer -->
 <footer class="footer">

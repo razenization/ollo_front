@@ -1,6 +1,58 @@
 (function ($) {
 	$(function () {
 
+		function toggleSlide(curEl, parentEl, minHeight) {
+			if (!curEl.data('inAnimation')) {
+				curEl.data('inAnimation', true);
+
+				let optional;
+				if (parentEl.attr('class').indexOf("mutual") > -1) {
+					optional = '.mutual__matches-overall';
+					minHeight = '150';
+				}
+				if (parentEl.hasClass('closed')) {
+					console.log(curEl.data('baseHeight'));
+					parentEl.animate({'height': curEl.data('baseHeight')}, 300);
+					setTimeout(function () {
+						parentEl.css({
+							'padding': curEl.data('basePadding'),
+							'margin': curEl.data('baseMargin'),
+						});
+						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
+							$(this).css({'display': $(this).data('baseDisplay')});
+						});
+						// parentEl.children('p[class*=latest]').hide();
+					}, 50);
+					setTimeout(function () {
+						curEl.data('inAnimation', false);
+					}, 350);
+				} else {
+					curEl.data({
+						'baseDisplay': parentEl.css('display'),
+						'baseHeight': parentEl.css('height'),
+						'basePadding': parentEl.css('padding'),
+						'baseMargin': parentEl.css('margin'),
+					});
+					parentEl.animate({'height': minHeight}, 300);
+					setTimeout(function () {
+						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
+							$(this).data('baseDisplay', $(this).css('display'));
+							$(this).css({'display': 'none'});
+						})
+						parentEl.css({
+							'padding': parentEl.css('padding-bottom') + parentEl.css('padding-top'),
+							'padding-top': parentEl.css('padding-top') / 2,
+							'margin': `${parentEl.css('margin-top')} 0 15px 0`,
+						});
+					}, 250);
+					setTimeout(function () {
+						curEl.data('inAnimation', false);
+					}, 350);
+				}
+				$(parentEl).toggleClass('closed');
+			}
+		}
+
 		var btn = $('#button-to-top');
 		// var inAnimation = false;
 
@@ -56,7 +108,6 @@
 					}, 300);
 				}
 				setTimeout(function () {
-					console.log(curEl);
 					curEl.inAnimation = false
 				}, 700);
 			}
@@ -64,7 +115,7 @@
 
 		$('.sidenav__option').each(function () {
 			$(this).click(function () {
-			    window.location.href = $(this).find('.sidenav__option-inner').attr("href");
+				window.location.href = $(this).find('.sidenav__option-inner').attr("href");
 			});
 		});
 
@@ -74,20 +125,17 @@
 					'bottom': -$(this).find('.sidenav__subnav').height()
 				}, 200);
 			} else {
-			  	$(this).find('.sidenav__subnav').stop().animate({
+				$(this).find('.sidenav__subnav').stop().animate({
 					'right': -$(this).find('.sidenav__subnav').width()
 				}, 200);
 			}
-			// $(this).find('.sidenav__subnav').stop().animate({
-			// 	'right': -$(this).find('.sidenav__subnav').width()
-			// }, 200);
 		}, function () {
 			if (window.matchMedia("(max-width: 540px)").matches) {
-			  	$(this).find('.sidenav__subnav').stop().animate({
+				$(this).find('.sidenav__subnav').stop().animate({
 					'bottom': 0
 				}, 200);
 			} else {
-			  	$(this).find('.sidenav__subnav').stop().animate({
+				$(this).find('.sidenav__subnav').stop().animate({
 					'right': 0
 				}, 200);
 			}
@@ -96,65 +144,50 @@
 		$('.hide__button').click(function (e) {
 			e.preventDefault();
 			let curEl = $(this);
-			if ($(this).hasClass('inline')) {
+			if (curEl.hasClass('inline')) {
 				parentEl = curEl.parent().parent();
 				minHeight = '50';
 			} else {
 				parentEl = curEl.parent();
 				minHeight = '50';
 			}
-
-			if (!curEl.inAnimation) {
-				curEl.inAnimation = true;
-
-				let optional;
-				if (parentEl.attr('class').indexOf("mutual") > -1) {
-					optional = '.mutual__matches-overall';
-					minHeight = '150';
-					console.log(minHeight);
-				}
-				console.log(optional);
-				if (curEl.hasClass('closed')) {
-					parentEl.animate({'height': curEl.data('baseHeight')}, 300);
-					setTimeout(function () {
-						parentEl.css({
-							'padding': curEl.data('basePadding'),
-							'margin': curEl.data('baseMargin'),
-						});
-						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
-							$(this).css({'display': $(this).data('baseDisplay')});
-						});
-						// parentEl.children('p[class*=latest]').hide();
-					}, 50);
-					setTimeout(function () {
-						curEl.inAnimation = false;
-					}, 350);
-				} else {
-					curEl.data({
-						'baseDisplay': parentEl.css('display'),
-						'baseHeight': parentEl.css('height'),
-						'basePadding': parentEl.css('padding'),
-						'baseMargin': parentEl.css('margin'),
-					});
-					parentEl.animate({'height': minHeight}, 300);
-					setTimeout(function () {
-						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
-							console.log(this);
-							$(this).data('baseDisplay', $(this).css('display'));
-							$(this).css({'display': 'none'});
-						})
-						parentEl.css({
-							'padding': parentEl.css('padding-bottom') + parentEl.css('padding-top'),
-							'padding-top': parentEl.css('padding-top') / 2,
-							'margin': `${parentEl.css('margin-top')} 0 15px 0`,
-						});
-					}, 250);
-					setTimeout(function () {
-						curEl.inAnimation = false;
-					}, 350);
-				}
-				$(curEl).toggleClass('closed');
-			}
+			toggleSlide(curEl, parentEl, minHeight);
+			setTimeout(function () {
+				visibleElts = parentEl.children().filter(function () {
+					return $(this).css('display') !== 'none' ? true : false;
+				});
+				visibleElts.css('cursor', 'pointer');
+				visibleElts.off('click');
+				visibleElts.click(function(e) {
+					e.preventDefault();
+					elToPass = $(this).siblings('.hide__button') || $(this);
+					if (!elToPass.length) elToPass = elToPass.prevObject;
+					toggleSlide(elToPass, elToPass.parent());
+					visibleElts.off('click');
+					visibleElts.removeAttr('style');
+				});
+			}, 250);
 		});
+
+		$('.media__header').click(function (e) {
+			e.preventDefault();
+			let curEl = $(this);
+			if (curEl.hasClass('inline')) {
+				parentEl = curEl.parent().parent();
+				minHeight = '50';
+			} else {
+				parentEl = curEl.parent();
+				minHeight = '50';
+			}
+			toggleSlide(curEl, parentEl, minHeight);
+		});
+
+		function updateScroll(){
+	    	let chatBox = $('.chat__messages');
+		    if (chatBox.scrollTop !== chatBox[0].scrollHeight) {
+		    	chatBox.scrollTop(chatBox[0].scrollHeight);
+		    }
+		}
+		updateScroll();
     }); // end of document ready
 })(jQuery); // end of jQuery name space
