@@ -97,6 +97,7 @@
 					}, 50);
 					setTimeout(function () {
 						curEl.data('inAnimation', false);
+						parentEl[0].style = '';
 					}, 350);
 				} else {
 					curEl.data({
@@ -194,7 +195,7 @@
 		$('.sidenav__option.sub').hover(function () {
 			if (window.matchMedia("(max-width: 540px)").matches) {
 				$(this).find('.sidenav__subnav').stop().animate({
-					'bottom': -$(this).find('.sidenav__subnav').height()
+					'top': -parseInt($(this).find('.sidenav__subnav').height()) - 60
 				}, 200);
 			} else {
 				$(this).find('.sidenav__subnav').stop().animate({
@@ -204,7 +205,7 @@
 		}, function () {
 			if (window.matchMedia("(max-width: 540px)").matches) {
 				$(this).find('.sidenav__subnav').stop().animate({
-					'bottom': 0
+					'top': 0
 				}, 200);
 			} else {
 				$(this).find('.sidenav__subnav').stop().animate({
@@ -230,7 +231,7 @@
 		updateScroll();
 
 		
-		$('.team__results-table .team__results-row:nth-child(n+3), .mutual-match__wrapper:nth-child(n+6), .best__bookies__tablerow:nth-child(n+3)').each(function () {
+		$('.team__results-table .team__results-row:nth-child(n+6), .mutual-match__wrapper:nth-child(n+7), .best__bookies__tablerow:nth-child(n+6)').each(function () {
 			$(this).data('baseDisplay', $(this).css('display'));
 			$(this).css('display', 'none');
 		});
@@ -273,24 +274,31 @@
 			// $('.skin-main').animate({'margin-top': '-15'}, 300);
 		// }, 600);
 
-		$('#chat__box-dragtoggle').click(function (e) {
+		$('.chat__box-dragtoggle').click(function (e) {
 			e.preventDefault();
 			chatBox = $(this).parents('.chat__box');
-			jsCbHeader = chatBox.children('.chat__box-header')[0];
-			jsChatBox = chatBox[0];
+			let jsCbHeader = chatBox.children('.chat__box-header')[0],
+			jsChatBox = chatBox[0],
+			bestBlock = $('.best__bookies');
 			if (chatBox.css('position') === 'absolute') {
 				$('.rightbar').children('.row:first').children('div:last')[0].appendChild(jsChatBox);
+				bestBlock.css('margin-top', bestBlock.data('baseMargin'));
 				chatBox[0].style = '';
 				jsCbHeader.onmousedown = null;
 			} else {
+				chatBox.data({'basePos': [e.pageX, e.pageY]});
+				console.log(chatBox.data('basePos'));
 				chatBox.css('width', chatBox.css('width'));
 				// chatBox.css('position', 'absolute');
 
 				var coords = getCoords(jsChatBox);
 				var shiftX = e.pageX - coords.left;
 				var shiftY = e.pageY - coords.top;
+				bestBlock.data({'baseMargin': bestBlock.css('margin-top')});
+				bestBlock.css('margin-top', parseInt(bestBlock.css('margin-top')) + parseInt(chatBox.css('height')) + parseInt(chatBox.css('margin-bottom')));
 
 				jsChatBox.style.position = 'absolute';
+				// jsChatBox.style.boxShadow = '';
 				document.body.appendChild(jsChatBox);
 				moveAt(e);
 
@@ -299,24 +307,34 @@
 				function moveAt(e) {
 					jsChatBox.style.left = e.pageX - shiftX + 'px';
 					jsChatBox.style.top = e.pageY - shiftY + 'px';
+					console.log(parseInt(jsChatBox.style.top) + parseInt($(jsChatBox).css('height')) > chatBox.data('basePos')[1] - 100 && parseInt(jsChatBox.style.left) + parseInt($(jsChatBox).css('width')) > chatBox.data('basePos')[0] - parseInt($(jsChatBox).css('width')));
+					if (parseInt(jsChatBox.style.top) + parseInt($(jsChatBox).css('height')) > chatBox.data('basePos')[1] && parseInt(jsChatBox.style.left) + parseInt($(jsChatBox).css('width')) > chatBox.data('basePos')[0] - parseInt($(jsChatBox).css('width'))) {
+						if (bestBlock.css('margin-top') === bestBlock.data('baseMargin') && !bestBlock.data('inAnimation')) {
+							bestBlock.data('inAnimation', true);
+							bestBlock.animate({'margin-top': parseInt(bestBlock.css('margin-top')) + parseInt(chatBox.css('height')) + parseInt(chatBox.css('margin-bottom'))});
+							setTimeout(function () {
+								bestBlock.data('inAnimation', false);
+							}, 300);
+						}
+					} else {
+						if (bestBlock.css('margin-top') !== bestBlock.data('baseMargin') && !bestBlock.data('inAnimation')) {
+							bestBlock.data('inAnimation', true);
+							bestBlock.animate({'margin-top': bestBlock.data('baseMargin')}, 300);
+							setTimeout(function () {
+								bestBlock.data('inAnimation', false);
+							}, 300);
+						}
+					}
 				}
 
 				jsCbHeader.onmousedown = function(e) {
+					// if (parseInt(bestBlock.css('margin-top')) !== bestBlock.data('baseMargin')) {
+					// 	bestBlock.animate({'margin-top': bestBlock.data('baseMargin')});
+					// }
 
 					coords = getCoords(jsChatBox);
 					shiftX = e.pageX - coords.left;
 					shiftY = e.pageY - coords.top;
-
-					// jsChatBox.style.position = 'absolute';
-					// document.body.appendChild(jsChatBox);
-					// moveAt(e);
-
-					// jsChatBox.style.zIndex = 1000; // над другими элементами
-
-					// function moveAt(e) {
-					// 	jsChatBox.style.left = e.pageX - shiftX + 'px';
-					// 	jsChatBox.style.top = e.pageY - shiftY + 'px';
-					// }
 
 					document.onmousemove = function(e) {
 						moveAt(e);
@@ -343,6 +361,33 @@
 			}
 			updateScroll();
 			chatBox.toggleClass('draggable');
+		});
+
+		$('.chat__box-hide').click(function (e) {
+			e.preventDefault();
+			curEl = $(this);
+			console.log(curEl.data('inAnimation'));
+			if (!curEl.data('inAnimation')) {
+				curEl.data('inAnimation', true);
+				let jsMsgBlock = $('.chat__messages')[0];
+				if (jsMsgBlock.style.paddingRight) {
+					setTimeout(function () {
+						jsMsgBlock.style.paddingRight = '';
+					}, 350);
+				} else {
+					jsMsgBlock.style.paddingRight = '6px';
+				}
+				$('.chat__messages').slideToggle(350);
+				$('#chat__form').slideToggle(350);
+				setTimeout(function () {
+					curEl.data('inAnimation', false);
+				}, 400);
+			}
+		});
+
+		$('.chat__box-more').click(function (e) {
+			e.preventDefault();
+			$('.chat__box-more-inner').slideToggle();
 		});
     }); // end of document ready
 })(jQuery); // end of jQuery name space
