@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
     color: #202020;
     background: #F7F7F7;
+    overflow: visible;
     padding: 0 calc(56vw - 960px);
 }
 
@@ -7573,12 +7574,16 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     top: 1px;
     left: calc(50% - 4px);
-    content: "\f077";
+    content: "\f078";
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
     font-size: 9px;
     color: #fff;
+}
+
+.hide__button.extended:after {
+    content: "\f077";
 }
 
 .hide__button.inline {
@@ -8420,9 +8425,40 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+@-webkit-keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 .skin-main {
-    margin-top: 15px;
+    margin: 40px 0 20px;
     width: 95%;
+    transform: translatey(0px);
+    -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 
 .skin-bg-left {
@@ -8440,22 +8476,41 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .skin__btn {
-    margin: 60px 0 20px;
+    margin-bottom: 20px;
     width: 65%;
     padding: 8px 30px;
-    border: 2px solid #fff;
     border-radius: 15px;
     background: #fff;
     font-size: 10px;
     font-weight: 500;
     color: #2B7BFB;
     text-decoration: none;
-    transition: background .1s linear, color .1s linear;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background .3s linear, color .3s linear;
+}
+
+.skin__btn:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all .3s;
+    z-index: -1;
+    background: #2ECC71;
+    height: 300px;
+    width: 200%;
+    border-radius: 50%;
 }
 
 .skin__btn:hover {
-    background: none;
     color: #fff;
+}
+
+.skin__btn:hover:before {
+    top: -40px;
 }
 
 @media (max-width: 1339.98px) {
@@ -9829,11 +9884,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .picks__bans .row > div:first-of-type {
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 .picks__bans .row > div:last-of-type {
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 @media (max-width: 991.98px) {
@@ -10325,6 +10380,7 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 10px;
     font-size: 12px;
     width: 100%;
+    height: 100px;
     border-collapse: separate;
     border-spacing: 0 15px;
 }
@@ -10433,6 +10489,7 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 15px;
     position: relative;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .mutual__matches-header {
@@ -10669,6 +10726,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 auto 7px;
     overflow: hidden;
     text-align: center;
+    height: 70px;
     border-radius: 20px;
 }
 
@@ -11982,6 +12040,7 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 15px;
     padding: 12px;
     margin: 25px 0;
+    overflow: hidden;
     position: relative;
 }
 
@@ -12168,11 +12227,17 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0 12px;
 }
 
+.best__bookie-bonus:not(.exclusive):hover p {
+    background: #2B7BFB;
+    color: #fff;
+}
+
 .best__bookie-bonus p {
     padding: 2px 0;
     border-radius: 8px;
     background: #fff;
     border: 1px solid #2B7BFB;
+    transition: background .5s, color .5s;
 }
 
 @media (max-width: 1443.98px) {
@@ -12191,11 +12256,35 @@ h1, h2, h3, h4, h5, h6, p {
     color: #E74C3C;
 }
 
+.best__bookie-bonus.exclusive:hover p {
+    color: #fff;
+    background: #E74C3C;
+}
+
+.best__bookie-bonus.exclusive:hover p:before {
+    top: -50px;
+}
+
 .best__bookie-bonus.exclusive p {
     margin-bottom: 13px;
     border: 1px solid #E74C3C;
     z-index: 1;
     position: relative;
+    overflow: hidden;
+}
+
+.best__bookie-bonus.exclusive p:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all .5s;
+    z-index: -1;
+    background: #E74C3C;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 @media (max-width: 1443.98px) {
@@ -12270,14 +12359,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .best__bookie-link a, .best__bookie-feed a {
     width: 21px;
-    border-radius: 10px;
+    border-radius: 7px;
     text-decoration: none;
     color: #fff;
     transition: opacity .15s;
-}
-
-.best__bookie-link a:hover, .best__bookie-feed a:hover {
-    opacity: 0.8;
 }
 
 @media (max-width: 1443.98px) {
@@ -12292,32 +12377,50 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+@media (max-width: 991.98px) {
+    .best__bookie-link {
+        padding-top: 6px;
+    }
+}
+
 .best__bookie-link a {
-    padding: 7px 6.5px;
+    padding: 13px 5px 4px;
     background: #2B7BFB;
+    transition: background .15s;
 }
 
 @media (max-width: 1443.98px) {
     .best__bookie-link a {
-        padding: 7px 5px;
+        padding: 6.5px 5px 7.5px;
     }
 }
 
 @media (max-width: 991.98px) {
     .best__bookie-link a {
-        padding: 7px 6.5px;
+        padding: 9.5px 6.5px 7px;
         height: 46px;
     }
 }
 
+.best__bookie-link a:hover {
+    background: #2ECC71;
+}
+
+.best__bookie-link img {
+    height: 18px;
+    margin-left: 1px;
+}
+
 @media (max-width: 1443.98px) {
     .best__bookie-link img {
+        height: 12px;
         vertical-align: top;
     }
 }
 
 @media (max-width: 991.98px) {
     .best__bookie-link img {
+        height: 14px;
         vertical-align: middle;
         margin-bottom: 6px;
     }
@@ -12327,31 +12430,49 @@ h1, h2, h3, h4, h5, h6, p {
     padding-right: 5px;
 }
 
+@media (max-width: 991.98px) {
+    .best__bookie-feed {
+        padding-top: 6px;
+    }
+}
+
 .best__bookie-feed a {
-    padding: 6px 8px;
-    border: 1px solid #2B7BFB;
+    padding: 12px 4px 3px;
+    border: 2px solid #2B7BFB;
+    transition: opacity .15s;
 }
 
 @media (max-width: 1443.98px) {
     .best__bookie-feed a {
-        padding: 6px 6.5px;
+        padding: 5.5px 4px 6.5px;
     }
 }
 
 @media (max-width: 991.98px) {
     .best__bookie-feed a {
-        padding: 6px 8px;
+        padding: 8.5px 5.5px 6px;
+        height: 46px;
     }
+}
+
+.best__bookie-feed a:hover {
+    opacity: 0.8;
+}
+
+.best__bookie-feed img {
+    height: 18px;
 }
 
 @media (max-width: 1443.98px) {
     .best__bookie-feed img {
+        height: 12px;
         vertical-align: top;
     }
 }
 
 @media (max-width: 991.98px) {
     .best__bookie-feed img {
+        height: 14px;
         vertical-align: middle;
         margin-bottom: 6px;
     }
@@ -13072,20 +13193,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hp-bar.mid {
-    background: #AEA222;
+    background: #B8AC2A;
 }
 
 .hp-bar.mid .hp-bar-inner {
-    background: #D5CA57;
+    background: #F1C40F;
     width: 70%;
 }
 
 .hp-bar.low {
-    background: #CE4739;
+    background: #BC3F32;
 }
 
 .hp-bar.low .hp-bar-inner {
-    background: #F92F19;
+    background: #E74C3C;
     width: 70%;
 }
 
@@ -13482,7 +13603,40 @@ h1, h2, h3, h4, h5, h6, p {
     overflow: hidden;
 }
 
-.chat__box:after {
+.chat__box.draggable .chat__box-header {
+    cursor: move;
+}
+
+.chat__box-header {
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chat__box-dragtoggle {
+    background-color: #2B7BFB;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    -webkit-mask-position: 40% 50% !important;
+    mask-position: 40% 50% !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-size: 100% !important;
+    mask-size: 100% !important;
+    -webkit-mask: url("../img/icons/best/planet.svg");
+    mask: url("../img/icons/best/planet.svg");
+    transition: background-color .15s;
+    z-index: 100;
+}
+
+.chat__messages-wrapper {
+    position: relative;
+}
+
+.chat__messages-wrapper:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -13490,51 +13644,8 @@ h1, h2, h3, h4, h5, h6, p {
     left: 0;
     pointer-events: none;
     background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    width: 93%;
+    width: 100%;
     height: 4em;
-}
-
-#chat__form {
-    padding-left: 16px;
-    height: 50px;
-    width: 100%;
-    border-radius: 0 0 15px 15px;
-    background: #EFF3FC;
-    overflow: hidden;
-    display: flex;
-}
-
-#send__message {
-    width: 100%;
-    border: none;
-    background: none;
-    height: 100%;
-    font-size: 80%;
-    font-family: inherit;
-}
-
-#send__message:focus {
-    outline: none;
-}
-
-#submit__message {
-    border: none;
-    background: blue;
-    height: 100%;
-    width: 50px;
-    position: relative;
-    cursor: pointer;
-}
-
-#submit__message:before {
-    content: "\f1d8";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1.5em;
-    line-height: 40px;
-    margin-right: 3px;
-    color: #fff;
 }
 
 .chat__messages {
@@ -13679,6 +13790,11 @@ h1, h2, h3, h4, h5, h6, p {
     right: auto;
 }
 
+.chat__messages-item.right .chat-timestamp {
+    margin-left: 0;
+    margin-right: 6px;
+}
+
 .chat__messages-item.verified .chat-nick:after {
     content: "";
     display: inline-block;
@@ -13756,6 +13872,52 @@ h1, h2, h3, h4, h5, h6, p {
 
 .chat-reply:hover {
     opacity: 1;
+}
+
+#chat__form {
+    padding-left: 16px;
+    height: 50px;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    background: #EFF3FC;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+#send__message {
+    border: none;
+    background: none;
+    height: 100%;
+    font-size: 80%;
+    width: 80%;
+    font-family: inherit;
+}
+
+#send__message:focus {
+    outline: none;
+}
+
+#submit__message {
+    border: none;
+    background: #2B7BFB;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#submit__message:before {
+    content: "\f1d8";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: 40px;
+    margin-right: 3px;
+    color: #fff;
 }
 
 .live__stats > .row > div:first-child {
