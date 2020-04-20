@@ -8,7 +8,7 @@ body {
     color: #202020;
     background: #F7F7F7;
     overflow: visible;
-    padding: 0 calc(56vw - 960px);
+    padding: 0 calc(54vw - 960px);
 }
 
 ul, li, ol {
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (min-width: 1520px) {
     .container {
-        max-width: 1480px;
+        max-width: 1640px;
     }
 }
 
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (min-width: 1520px) {
     .container, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-sxxl, .container-xxl, .container-xxxl {
-        max-width: 1480px;
+        max-width: 1640px;
     }
 }
 
@@ -7248,6 +7248,17 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.sidenav__inner {
+    min-height: 90%;
+}
+
+@media (max-width: 575.98px) {
+    .sidenav__inner {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .user__actions {
     margin: 30px auto;
     width: 90%;
@@ -7310,6 +7321,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .sidenav__options {
     width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -7361,6 +7373,26 @@ h1, h2, h3, h4, h5, h6, p {
 
     .sidenav__option img {
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-height: 1060px) {
+    .sidenav__options {
+        max-height: 45%;
+    }
+
+    .sidenav__option:nth-child(n+5) {
+        display: none;
+    }
+
+    .sidenav__delim:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 724px) {
+    .sidenav__options {
+        max-height: 70%;
     }
 }
 
@@ -7540,7 +7572,7 @@ h1, h2, h3, h4, h5, h6, p {
     right: 0;
     visibility: hidden;
     z-index: 1000;
-    margin-right: calc(55vw - 960px);
+    margin-right: calc(52vw - 960px);
     margin-bottom: 150px;
     transition: visibility .2s, opacity .2s linear, background-color .1s linear;
 }
@@ -7593,7 +7625,7 @@ h1, h2, h3, h4, h5, h6, p {
 .hide__button:after {
     position: absolute;
     top: 1px;
-    left: calc(50% - 4px);
+    left: calc(50% - 4.5px);
     content: "\f078";
     font-family: FontAwesome;
     font-weight: normal;
@@ -9392,32 +9424,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (max-width: 991.98px) {
-    .match__main-info.live .match__team {
+    .match__main-info .match__team {
         height: 25%;
     }
 }
 
-.match__main-info.live .match__team:first-of-type .match__team-bg {
+.match__main-info .match__team:first-of-type .match__team-bg {
     left: -10px;
 }
 
 @media (max-width: 1339.98px) {
-    .match__main-info.live .match__team:first-of-type .match__team-bg {
+    .match__main-info .match__team:first-of-type .match__team-bg {
         left: -40px;
     }
 }
 
-.match__main-info.live .match__team:last-of-type .match__team-country {
+.match__main-info .match__team:last-of-type .match__team-country {
     right: auto;
     left: -6px;
 }
 
-.match__main-info.live .match__team:last-of-type .match__team-bg {
+.match__main-info .match__team:last-of-type .match__team-bg {
     right: -10px;
 }
 
 @media (max-width: 1339.98px) {
-    .match__main-info.live .match__team:last-of-type .match__team-bg {
+    .match__main-info .match__team:last-of-type .match__team-bg {
         right: -40px;
     }
 }
@@ -10053,17 +10085,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .map__pick-img, .map__ban-img {
     position: absolute;
-    min-height: 110%;
-    max-height: 110%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 110%;
     min-width: 110%;
     max-width: 110%;
     top: -5%;
     left: -5%;
     z-index: 0;
-}
-
-.map__ban-img {
-    height: 100%;
 }
 
 .header__groupped {
@@ -10135,7 +10164,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .map__stats-img {
     position: absolute;
-    min-height: 110%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 110%;
     min-width: 110%;
     max-width: 110%;
     top: -5%;
@@ -10405,8 +10436,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .result__opponent {
     text-align: left;
-    align-items: center;
-    width: 140px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @media (max-width: 575.98px) {
@@ -12321,12 +12354,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 1443.98px) {
     .best__bookie-bonus.exclusive .exclusive-text {
+        padding-top: 20px;
         font-size: 7px;
     }
 }
 
 @media (max-width: 991.98px) {
     .best__bookie-bonus.exclusive .exclusive-text {
+        padding-top: 25px;
         font-size: 7px;
     }
 }
@@ -12540,23 +12575,27 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-.team__stats-logo-wrapper:first-child:after {
+.team__stats-logo-wrapper:after {
     display: block;
     margin: 0 auto;
     content: "";
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+@media (max-width: 1199.98px) {
+    .team__stats-logo-wrapper:after {
+        width: 7px;
+        height: 7px;
+    }
+}
+
+.team__stats-logo-wrapper:first-child:after {
     background: #E74C3C;
 }
 
 .team__stats-logo-wrapper:last-child:after {
-    display: block;
-    margin: 0 auto;
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
     background: #3D4274;
 }
 
@@ -12564,9 +12603,9 @@ h1, h2, h3, h4, h5, h6, p {
     height: 50px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
     .team__stats-logo {
-        height: 40px;
+        height: 35px;
     }
 }
 
@@ -12940,6 +12979,21 @@ h1, h2, h3, h4, h5, h6, p {
     overflow: hidden;
 }
 
+.live-stream__wrapper iframe .player, .stream__wrapper iframe .player {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.live-stream__wrapper iframe .pl-controls-top, .stream__wrapper iframe .pl-controls-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.live-stream__wrapper iframe .pl-controls-bottom, .stream__wrapper iframe .pl-controls-bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 @media (max-width: 1199.98px) {
     .live-stream__wrapper iframe, .stream__wrapper iframe {
         height: 30vh;
@@ -12962,6 +13016,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .logs-bg {
     position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
     left: 0;
     top: 0;
     width: 100%;
@@ -13069,14 +13125,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .header__row {
     vertical-align: middle;
-    background: #2B7BFB;
 }
 
-.header__row.t {
+.header__row.t th {
     background: #F1C40F;
 }
 
 .header__row th {
+    background: #2B7BFB;
     vertical-align: middle;
 }
 
@@ -13144,11 +13200,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .match__maintable-row {
     height: 30px;
-    background: rgba(43, 123, 251, 0.5);
     font-size: 12px;
 }
 
-.match__maintable-row.t {
+.match__maintable-row td {
+    background: rgba(43, 123, 251, 0.5);
+}
+
+.match__maintable-row.t td {
     background: rgba(241, 196, 15, 0.5);
 }
 
@@ -13164,7 +13223,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hp-bar {
-    height: 50%;
+    height: 15px;
     width: 100%;
     border-radius: 5px;
     position: relative;
@@ -13199,7 +13258,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .hp-bar-inner {
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.4;
     font-size: 10px;
     position: absolute;
     padding-left: 5px;
@@ -13740,13 +13799,7 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: .5;
 }
 
-.chat__messages-wrapper {
-    position: relative;
-}
-
 .chat__messages {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     position: relative;
     overflow: hidden;
     height: 350px;
@@ -14309,14 +14362,32 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-.live__overview-heroes-wrapper {
+.live__overview-picked {
     width: 90%;
     height: 55%;
     display: flex;
     flex-direction: column;
     position: relative;
     text-align: center;
-    overflow: hidden;
+}
+
+.live__overview-picked:hover .live__overview-picked-tooltip {
+    opacity: 1;
+}
+
+.live__overview-picked-tooltip {
+    position: absolute;
+    opacity: 0;
+    width: 80px;
+    top: 20%;
+    left: -50%;
+    font-size: 9px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 7px;
+    color: #fff;
+    padding: 4px;
+    z-index: 2;
+    transition: opacity .3s;
 }
 
 .live__overview-hero {
@@ -14402,7 +14473,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .live__overview-player-item {
-    padding: 5px;
+    padding: 2px;
     border-radius: 15px;
     width: 50%;
 }
@@ -14634,6 +14705,204 @@ h1, h2, h3, h4, h5, h6, p {
     .live__overview-ban-heroname {
         font-size: 9px;
     }
+}
+
+.other__matches {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 25px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.other__matches-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.other__matches-header a {
+    text-decoration: none;
+    color: #979797;
+    transition: color .15s;
+}
+
+.other__matches-header a.selected {
+    color: #2B7BFB;
+}
+
+.other__matches-header a:hover {
+    color: #2B7BFB;
+}
+
+.other__matches-header-inner {
+    font-size: 14px;
+    color: #2B7BFB;
+}
+
+.other__matches-header-left {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (max-width: 1443.98px) {
+    .other__matches-header-left {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1339.98px) {
+    .other__matches-header-left {
+        width: 35%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .other__matches-header-left {
+        width: 25%;
+    }
+}
+
+@media (max-width: 369.98px) {
+    .other__matches-header-left {
+        width: 35%;
+    }
+}
+
+.other__matches-switcher {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.other__matches-cs, .other__matches-dota {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-size: 100% !important;
+    mask-size: 100% !important;
+    -webkit-mask-position: 50% 50% !important;
+    mask-position: 50% 50% !important;
+    background: #979797;
+    transition: background .15s !important;
+}
+
+.other__matches-cs:hover, .other__matches-dota:hover {
+    background: #2B7BFB;
+}
+
+.other__matches-cs.selected, .other__matches-dota.selected {
+    background: #2B7BFB;
+}
+
+.other__matches-cs {
+    -webkit-mask: url("../img/icons/other/cs.svg");
+    mask: url("../img/icons/other/cs.svg");
+}
+
+.other__matches-dota {
+    -webkit-mask: url("../img/icons/other/dota.svg");
+    mask: url("../img/icons/other/dota.svg");
+}
+
+.other__matches-item {
+    margin: 0 auto 7px;
+    overflow: hidden;
+    text-align: center;
+    height: 70px;
+    border-radius: 20px;
+}
+
+.other__matches-item:nth-child(even) {
+    background: #EFF3FC;
+}
+
+.other__match-table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+}
+
+.other__match-tablerow {
+    margin: 0 auto 7px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.other__match-tablerow td {
+    height: 70px;
+}
+
+.other__match-team {
+    width: 24%;
+    padding-top: 10px;
+}
+
+.other__match-team:first-child {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.other__match-team:last-child {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.other__match-team-name {
+    width: 40px;
+    text-overflow: clip;
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 3;
+    vertical-align: top;
+}
+
+.other__match-team-logo {
+    max-height: 30px;
+}
+
+.other__match-score {
+    font-weight: 500;
+    font-size: 16px;
+    width: 5%;
+}
+
+.other__match-score.lead {
+    color: #2B7BFB;
+}
+
+.other__match-delim {
+    width: 10%;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.other__match-delim:before {
+    content: "VS";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+    margin: 0 auto;
+}
+
+.other__match-date {
+    font-size: 10px;
 }
 
 .tournaments__banner {

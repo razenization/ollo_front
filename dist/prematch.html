@@ -51,67 +51,69 @@
 		<a href="#" class="ollo-logo">
 			<img class="main-logo" src="assets/img/ollo-logo.svg" alt="">
 		</a>
-		<div class="user__actions">
-			<!-- <a class="user__profile" href="#">Личный кабинет</a> -->
-			<a class="user__profile" href="#"><i class="fas fa-user-circle"></i></a>
-			<div class="user__delim"></div>
-			<a class="user__settings" href="#"><img src="assets/img/icons/sidebar/settings-icon.svg" alt=""></a>
-		</div>
-		<div class="sidenav__options">
-			<div class="sidenav__option  sub">
-				<div class="sidenav__option-inner-wrapper  active">
-					<a href="#" class="sidenav__option-inner csgo"></a>
-				</div>
+		<div class="sidenav__inner">
+			<div class="user__actions">
+				<!-- <a class="user__profile" href="#">Личный кабинет</a> -->
+				<a class="user__profile" href="#"><i class="fas fa-user-circle"></i></a>
+				<div class="user__delim"></div>
+				<a class="user__settings" href="#"><img src="assets/img/icons/sidebar/settings-icon.svg" alt=""></a>
+			</div>
+			<div class="sidenav__options">
+				<div class="sidenav__option  sub">
+					<div class="sidenav__option-inner-wrapper  active">
+						<a href="#" class="sidenav__option-inner csgo"></a>
+					</div>
 
-				<div class="sidenav__subnav">
-					<a class="sidenav__suboption" href="#"><img src="assets/img/icons/cup.svg" alt=""></a>
+					<div class="sidenav__subnav">
+						<a class="sidenav__suboption" href="#"><img src="assets/img/icons/cup.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  dota"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  lol"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  foot"></a>
+					</div>
+				</div>
+				<div class="sidenav__delim" href="#">
+					<a class="sidenav__delim-inner" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__delim" href="#">
+					<a class="sidenav__delim-inner  additional" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
 				</div>
 			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  dota"></a>
-				</div>
+			<div class="sidenav__stats">
+				<span class="sidenav__stats-live-stat">Матчей в LIVE: <span class="sidenav__stats-live-count">27</span></span>
+				<span class="sidenav__stats-quality  high">Качество игр:</span>
 			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  lol"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  foot"></a>
-				</div>
-			</div>
-			<div class="sidenav__delim" href="#">
-				<a class="sidenav__delim-inner" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__delim" href="#">
-				<a class="sidenav__delim-inner  additional" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
-			</div>
-		</div>
-		<div class="sidenav__stats">
-			<span class="sidenav__stats-live-stat">Матчей в LIVE: <span class="sidenav__stats-live-count">27</span></span>
-			<span class="sidenav__stats-quality  high">Качество игр:</span>
 		</div>
 	</div>
 </div>
@@ -475,7 +477,7 @@
 											</tr>
 											<tr class="team__results-row">
 												<td class="result__opponent">
-													<span class="result__opponent-name">Natus Vincere</span>
+													<span class="result__opponent-name">Ninjas in Pyjamas</span>
 												</td>
 												<td class="result__date">25.04.20</td>
 												<!-- <td class="result__match-type">Lan</td> -->

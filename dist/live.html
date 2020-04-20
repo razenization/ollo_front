@@ -51,67 +51,69 @@
 		<a href="#" class="ollo-logo">
 			<img class="main-logo" src="assets/img/ollo-logo.svg" alt="">
 		</a>
-		<div class="user__actions">
-			<!-- <a class="user__profile" href="#">Личный кабинет</a> -->
-			<a class="user__profile" href="#"><i class="fas fa-user-circle"></i></a>
-			<div class="user__delim"></div>
-			<a class="user__settings" href="#"><img src="assets/img/icons/sidebar/settings-icon.svg" alt=""></a>
-		</div>
-		<div class="sidenav__options">
-			<div class="sidenav__option  sub">
-				<div class="sidenav__option-inner-wrapper  active">
-					<a href="#" class="sidenav__option-inner csgo"></a>
-				</div>
+		<div class="sidenav__inner">
+			<div class="user__actions">
+				<!-- <a class="user__profile" href="#">Личный кабинет</a> -->
+				<a class="user__profile" href="#"><i class="fas fa-user-circle"></i></a>
+				<div class="user__delim"></div>
+				<a class="user__settings" href="#"><img src="assets/img/icons/sidebar/settings-icon.svg" alt=""></a>
+			</div>
+			<div class="sidenav__options">
+				<div class="sidenav__option  sub">
+					<div class="sidenav__option-inner-wrapper  active">
+						<a href="#" class="sidenav__option-inner csgo"></a>
+					</div>
 
-				<div class="sidenav__subnav">
-					<a class="sidenav__suboption" href="#"><img src="assets/img/icons/cup.svg" alt=""></a>
+					<div class="sidenav__subnav">
+						<a class="sidenav__suboption" href="#"><img src="assets/img/icons/cup.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  dota"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  lol"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  foot"></a>
+					</div>
+				</div>
+				<div class="sidenav__delim" href="#">
+					<a class="sidenav__delim-inner" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__option" href="#">
+					<div class="sidenav__option-inner-wrapper">
+						<a href="#" class="sidenav__option-inner  poker"></a>
+					</div>
+				</div>
+				<div class="sidenav__delim" href="#">
+					<a class="sidenav__delim-inner  additional" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
 				</div>
 			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  dota"></a>
-				</div>
+			<div class="sidenav__stats">
+				<span class="sidenav__stats-live-stat">Матчей в LIVE: <span class="sidenav__stats-live-count">27</span></span>
+				<span class="sidenav__stats-quality  high">Качество игр:</span>
 			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  lol"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  foot"></a>
-				</div>
-			</div>
-			<div class="sidenav__delim" href="#">
-				<a class="sidenav__delim-inner" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__option" href="#">
-				<div class="sidenav__option-inner-wrapper">
-					<a href="#" class="sidenav__option-inner  poker"></a>
-				</div>
-			</div>
-			<div class="sidenav__delim" href="#">
-				<a class="sidenav__delim-inner  additional" href="#"><img src="assets/img/icons/sidebar/delim-icon.svg" alt=""></a>
-			</div>
-		</div>
-		<div class="sidenav__stats">
-			<span class="sidenav__stats-live-stat">Матчей в LIVE: <span class="sidenav__stats-live-count">27</span></span>
-			<span class="sidenav__stats-quality  high">Качество игр:</span>
 		</div>
 	</div>
 </div>
@@ -813,7 +815,7 @@
 											</tr>
 											<tr class="team__results-row">
 												<td class="result__opponent">
-													<span class="result__opponent-name">Natus Vincere</span>
+													<span class="result__opponent-name">Ninjas in Pyjamas</span>
 												</td>
 												<td class="result__date">25.04.20</td>
 												<!-- <td class="result__match-type">Lan</td> -->
@@ -1393,79 +1395,77 @@
 										<a href="#" class="chat__box-dragtoggle"></a>
 									</div>
 								</div>
-								<div class="chat__messages-wrapper">
-									<div class="chat__messages">
-										<div class="chat__messages-item  purple  verified  staff">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  red">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  green  verified">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  green  verified">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  purple">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  purple right">
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-timestamp">10:52</span><span class="chat-nick">Amaterasu</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-										</div> <!-- ./chat__messages-item -->
-										<div class="chat__messages-item  blue  verified">
-											<div class="chat-img-wrapper">
-												<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
-											</div>
-											<div class="message__body">
-												<a href="#" class="chat-reply">Ответить</a>
-												<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
-												<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
-											</div>
-										</div> <!-- ./chat__messages-item -->
-									</div>
+								<div class="chat__messages">
+									<div class="chat__messages-item  purple  verified  staff">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  red">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  green  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  green  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  purple">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  purple right">
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-timestamp">10:52</span><span class="chat-nick">Amaterasu</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+									</div> <!-- ./chat__messages-item -->
+									<div class="chat__messages-item  blue  verified">
+										<div class="chat-img-wrapper">
+											<img src="assets/img/util/dummies/author-img.svg" alt="" class="chat-img">
+										</div>
+										<div class="message__body">
+											<a href="#" class="chat-reply">Ответить</a>
+											<span class="chat-nick">Amaterasu</span><span class="chat-timestamp">10:52</span>
+											<p class="message-body">Плохая игра от Natus Vincere. Впрочем, как и всегда KEKW</p>
+										</div>
+									</div> <!-- ./chat__messages-item -->
 								</div>
 								<form action="/" id="chat__form">
 									<input type="text" id="send__message" name="send__message-text" placeholder="Выскажи своё мнение здесь...">
@@ -1689,6 +1689,44 @@
 						<img src="assets/img/rightbar/ak47-bg-left.svg" alt="" class="skin-bg-left">
 						<img src="assets/img/rightbar/ak47-bg-right.svg" alt="" class="skin-bg-right">
 						<a href="#" class="skin__btn">Забрать скин!</a>
+					</div>
+					<div class="other__matches">
+						<div class="other__matches-header">
+							<div class="other__matches-header-left">
+								<p class="other__matches-header-inner">Матчи</p>
+								<div class="other__matches-switcher">
+									<a href="#" class="other__matches-cs"></a>
+									<a href="#" class="other__matches-dota  selected"></a>
+								</div>
+							</div>
+							<div class="other__matches-header-right">
+								<div class="other__matches-switcher-type">
+									<a href="#" class="other__matches-all">Все</a>
+									<a href="#" class="other__matches-past  selected">Результаты</a>
+								</div>
+							</div>
+						</div>
+						<div class="other__matches-content">
+							<div class="other__matches-item">
+							<table class="other__match-table">
+								<tr class="other__match-tablerow">
+									<td class="other__match-team">
+										<img src="assets/img/teams/vitality/logo.svg" alt="" class="other__match-team-logo">
+										<span class="other__match-team-name">Ninjas in Pyjamas</span>
+									</td>
+									<!-- <td class="other__match-score  lead">2</td> -->
+									<td class="other__match-delim">
+										<span class="other__match-date">24.02.20</span>
+									</td>
+									<!-- <td class="other__match-score">0</td> -->
+									<td class="other__match-team">
+										<span class="other__match-team-name">Spirit</span>
+										<img src="assets/img/teams/spirit/logo.svg" alt="" class="other__match-team-logo">
+									</td>
+								</tr>
+							</table>
+						</div>
+						</div>
 					</div>				</div> <!-- ./col-34 -->
 			</div> <!-- ./row -->
 		</div>
