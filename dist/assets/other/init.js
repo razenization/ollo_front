@@ -142,15 +142,7 @@
 		btn.on('click', function (e) {
 			e.preventDefault();
 			$('html, body').animate({scrollTop: 0}, '300');
-		});
-
-		$('.banner-slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			arrows: true,
-			autoplaySpeed: 3500,
-		});
+		});	
 
 		$('.lives__main-wrapper').each(function () {
 			let mInfo = $(this).find('.match__info');
@@ -389,5 +381,6 @@
 			e.preventDefault();
 			$('.chat__box-more-inner').slideToggle();
 		});
+		
     }); // end of document ready
 })(jQuery); // end of jQuery name space
