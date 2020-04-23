@@ -216,9 +216,8 @@
 
 		function updateScroll(){
 			let chatBox = $('.chat__messages');
-			if (chatBox.scrollTop !== chatBox[0].scrollHeight) {
-				chatBox.scrollTop(chatBox[0].scrollHeight);
-			}
+			// console.log(chatBox.length);
+			(chatBox.length) && (chatBox.scrollTop !== chatBox[0].scrollHeight) && chatBox.scrollTop(chatBox[0].scrollHeight);
 		}
 		updateScroll();
 
@@ -381,6 +380,34 @@
 			e.preventDefault();
 			$('.chat__box-more-inner').slideToggle();
 		});
-		
+
+		$('.other__matches-cs, .other__matches-dota').click(function (e) {
+			e.preventDefault();
+			$(this).siblings().removeClass('selected');
+			$(this).addClass('selected');
+
+			if ($(this).attr('class').indexOf("dota") > -1) {
+				$('.other__matches-content-cs').css('display', 'none');
+				$('.other__matches-content-dota').css('display', 'block');
+			} else {
+				$('.other__matches-content-dota').css('display', 'none');
+				$('.other__matches-content-cs').css('display', 'block');
+			}
+		});
+
+		function str(b){
+			for (let i = 0; i < b.length / 2; i++) {
+				if (!(b[i] === b[b.length - (i + 1)])) {
+					return false;
+				}
+			}
+			return true;
+		}
+		let test1 = str('мадам');
+		let test2 = str('cобака');
+
+		console.log(test1);
+		console.log(test2);
+
     }); // end of document ready
 })(jQuery); // end of jQuery name space
