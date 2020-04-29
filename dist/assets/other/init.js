@@ -2,15 +2,30 @@
 	$(function () {
 
 		function toggleSlide(curEl, parentEl, minHeight) {
-			if (!curEl.data('inAnimation')) {
+			animated = parentEl.find('.lives__main-tablerow td').filter(function () {
+				return this.inAnimation;
+			});
+			if (!animated.length && !curEl.data('inAnimation')) {
 				curEl.data('inAnimation', true);
-
 				if (curEl.hasClass('extended')) {
-					// console.log(curEl.data('baseHeight'));
+					if (parentEl.attr('class').indexOf("container") > -1) {
+						let dataHeight = 0;
+						parentEl.children('div').each(function () {
+							dataHeight += parseInt($(this).css('height'));
+						});
+						curEl.data('htaBefore', dataHeight);
+					}
 					parentEl.animate({'height': curEl.data('baseHeight')}, 300);
-					styled = parentEl.find('*').filter(function () {
-						return this.style.display ? true : false;
-					});
+					if (parentEl.attr('class').indexOf("container") > -1) {
+						styled = parentEl.children('*').filter(function () {
+							return this.style.display ? true : false;
+						});
+					} else {
+						styled = parentEl.find('*').filter(function () {
+							return this.style.display ? true : false;
+						});
+					}
+					if (!styled.length) styled = parentEl.children('div');
 					setTimeout(function () {
 						styled.each(function () {
 							$(this).css({'display': 'none'});
@@ -22,14 +37,15 @@
 				} else {
 					parentEl.css('height', parentEl.css('height'));
 					curEl.data({
-						// 'baseDisplay': parentEl.css('display'),
 						'baseHeight': parentEl.css('height'),
-						// 'basePadding': parentEl.css('padding'),
-						// 'baseMargin': parentEl.css('margin'),
 					});
-					invisible = parentEl.find('*').filter(function () {
-						return this.style.display === 'none' ? true : false;
-					});
+					if (parentEl.attr('class').indexOf("container") > -1) {
+						invisible = parentEl.children('div');
+					} else {
+						invisible = parentEl.find('*').filter(function () {
+							return this.style.display === 'none' ? true : false;
+						});
+					}
 					let heightToAppend = 0;
 					invisible.each(function () {
 						heightToAppend += parseInt($(this).css('height'));
@@ -46,27 +62,31 @@
 						heightToAppend += 51 * invisible.length / 2;
 						heightToAppend -= bSpacing * invisible.length / 2;
 					} else if (parentEl.attr('class').indexOf("mutual") > -1) {
-						// console.log(parseInt($(invisible[0]).css('margin-bottom')));
 						heightToAppend += parseInt($(invisible[0]).css('margin-bottom')) * invisible.length;
 					} else if (parentEl.attr('class').indexOf("best") > -1) {
 						heightToAppend += bSpacing * invisible.length;
+					} else if (parentEl.attr('class').indexOf("streams") > -1) {
+						heightToAppend = 0;
+						heightToAppend += 31 * invisible.length + parseInt(parentEl.css('padding-bottom'));
+					} else {
+						heightToAppend = 0;
+						if (parentEl.attr('class').indexOf("container") > -1) {
+							visible = parentEl.children('p').each(function () {
+								if (!($(this).css('display') === 'none')) {
+									heightToAppend += parseInt($(this).css('height'));
+								}
+							});
+						}
+						heightToAppend += curEl.data('htaBefore') + parseInt(parentEl.css('padding-bottom'));
+						parentEl.children('*').each(function () {
+							this.style.display = '';
+						});
 					}
-					// console.log(heightToAppend);
 					parentEl.animate({'height': parseInt(parentEl.css('height')) + heightToAppend}, 300);
 
-					// setTimeout(function () {
-					// 	parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
-					// 		$(this).data('baseDisplay', $(this).css('display'));
-					// 		$(this).css({'display': 'none'});
-					// 	})
-					// 	parentEl.css({
-					// 		'padding': parentEl.css('padding-bottom') + parentEl.css('padding-top'),
-					// 		'padding-top': parentEl.css('padding-top') / 2,
-					// 		'margin': `${parentEl.css('margin-top')} 0 15px 0`,
-					// 	});
-					// }, 250);
 					setTimeout(function () {
 						curEl.data('inAnimation', false);
+						parentEl[0].style.height = '';
 					}, 350);
 				}
 				$(curEl).toggleClass('extended');
@@ -83,7 +103,6 @@
 					minHeight = '150';
 				}
 				if (parentEl.hasClass('closed')) {
-					// console.log(curEl.data('baseHeight'));
 					parentEl.animate({'height': curEl.data('baseHeight')}, 300);
 					setTimeout(function () {
 						parentEl.css({
@@ -93,7 +112,6 @@
 						parentEl.children().not(curEl.parent()).not(curEl).not('p').not(optional).each(function () {
 							$(this).css({'display': $(this).data('baseDisplay')});
 						});
-						// parentEl.children('p[class*=latest]').hide();
 					}, 50);
 					setTimeout(function () {
 						curEl.data('inAnimation', false);
@@ -127,7 +145,6 @@
 		}
 
 		var btn = $('#button-to-top');
-		// var inAnimation = false;
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() < 800) {
@@ -216,21 +233,15 @@
 
 		function updateScroll(){
 			let chatBox = $('.chat__messages');
-			// console.log(chatBox.length);
 			(chatBox.length) && (chatBox.scrollTop !== chatBox[0].scrollHeight) && chatBox.scrollTop(chatBox[0].scrollHeight);
 		}
 		updateScroll();
 
 		
-		$('.team__results-table .team__results-row:nth-child(n+6), .mutual-match__wrapper:nth-child(n+7), .best__bookies__tablerow:nth-child(n+6)').each(function () {
+		$('.team__results-table .team__results-row:nth-child(n+6), .mutual-match__wrapper:nth-child(n+7), .best__bookies__tablerow:nth-child(n+6), .streams__item:nth-child(n+3)').each(function () {
 			$(this).data('baseDisplay', $(this).css('display'));
 			$(this).css('display', 'none');
 		});
-
-		// $('.latest-header').click(function () {
-			// tempLatest[0].appendTo($('.team__results-table:first'));
-			// tempLatest[1].appendTo($('.team__results-table:last'));
-		// });
 
 		$('.hide__button').click(function (e) {
 			e.preventDefault();
@@ -243,27 +254,19 @@
 				minHeight = '50';
 			}
 			toggleSlide(curEl, parentEl, minHeight);
-			// setTimeout(function () {
-			// 	visibleElts = parentEl.children().filter(function () {
-			// 		return $(this).css('display') !== 'none' ? true : false;
-			// 	});
-			// 	visibleElts.css('cursor', 'pointer');
-			// 	visibleElts.off('click');
-			// 	visibleElts.click(function(e) {
-			// 		e.preventDefault();
-			// 		elToPass = $(this).siblings('.hide__button') || $(this);
-			// 		if (!elToPass.length) elToPass = elToPass.prevObject;
-			// 		toggleSlide(elToPass, elToPass.parent());
-			// 		visibleElts.off('click');
-			// 		visibleElts.removeAttr('style');
-			// 	});
-			// }, 250);
 		});
 
-		// setInterval(function () {
-			// $('.skin-main').animate({'margin-top': '15'}, 300).delay(300).animate({'margin-top': '-15'}, 300).delay(300);
-			// $('.skin-main').animate({'margin-top': '-15'}, 300);
-		// }, 600);
+		$('.hide__button.extended').each(function () {
+			$(this).data('baseHeight', parseInt($(this).parent().css('height')) + parseInt($(this).parent().parent().css('padding-top')) * 2);
+			let dataHeight = 0;
+			$(this).parent().parent().children('div').each(function () {
+				dataHeight += parseInt($(this).css('height'));
+			});
+			$(this).parent().parent().find('*').each(function () {
+				$(this).data('baseDisplay', $(this).css('display'));
+			});
+			$(this).data('htaBefore', dataHeight);
+		});
 
 		$('.chat__box-dragtoggle').click(function (e) {
 			e.preventDefault();
@@ -278,9 +281,7 @@
 				jsCbHeader.onmousedown = null;
 			} else {
 				chatBox.data({'basePos': [e.pageX, e.pageY]});
-				console.log(chatBox.data('basePos'));
 				chatBox.css('width', chatBox.css('width'));
-				// chatBox.css('position', 'absolute');
 
 				var coords = getCoords(jsChatBox);
 				var shiftX = e.pageX - coords.left;
@@ -289,16 +290,14 @@
 				bestBlock.css('margin-top', parseInt(bestBlock.css('margin-top')) + parseInt(chatBox.css('height')) + parseInt(chatBox.css('margin-bottom')));
 
 				jsChatBox.style.position = 'absolute';
-				// jsChatBox.style.boxShadow = '';
 				document.body.appendChild(jsChatBox);
 				moveAt(e);
 
-				jsChatBox.style.zIndex = 1000; // над другими элементами
+				jsChatBox.style.zIndex = 1000;
 
 				function moveAt(e) {
 					jsChatBox.style.left = e.pageX - shiftX + 'px';
 					jsChatBox.style.top = e.pageY - shiftY + 'px';
-					console.log(parseInt(jsChatBox.style.top) + parseInt($(jsChatBox).css('height')) > chatBox.data('basePos')[1] - 100 && parseInt(jsChatBox.style.left) + parseInt($(jsChatBox).css('width')) > chatBox.data('basePos')[0] - parseInt($(jsChatBox).css('width')));
 					if (parseInt(jsChatBox.style.top) + parseInt($(jsChatBox).css('height')) > chatBox.data('basePos')[1] && parseInt(jsChatBox.style.left) + parseInt($(jsChatBox).css('width')) > chatBox.data('basePos')[0] - parseInt($(jsChatBox).css('width'))) {
 						if (bestBlock.css('margin-top') === bestBlock.data('baseMargin') && !bestBlock.data('inAnimation')) {
 							bestBlock.data('inAnimation', true);
@@ -319,9 +318,6 @@
 				}
 
 				jsCbHeader.onmousedown = function(e) {
-					// if (parseInt(bestBlock.css('margin-top')) !== bestBlock.data('baseMargin')) {
-					// 	bestBlock.animate({'margin-top': bestBlock.data('baseMargin')});
-					// }
 
 					coords = getCoords(jsChatBox);
 					shiftX = e.pageX - coords.left;
@@ -357,7 +353,6 @@
 		$('.chat__box-hide').click(function (e) {
 			e.preventDefault();
 			curEl = $(this);
-			console.log(curEl.data('inAnimation'));
 			if (!curEl.data('inAnimation')) {
 				curEl.data('inAnimation', true);
 				let jsMsgBlock = $('.chat__messages')[0];
@@ -394,20 +389,6 @@
 				$('.other__matches-content-cs').css('display', 'block');
 			}
 		});
-
-		function str(b){
-			for (let i = 0; i < b.length / 2; i++) {
-				if (!(b[i] === b[b.length - (i + 1)])) {
-					return false;
-				}
-			}
-			return true;
-		}
-		let test1 = str('мадам');
-		let test2 = str('cобака');
-
-		console.log(test1);
-		console.log(test2);
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
