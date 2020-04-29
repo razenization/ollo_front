@@ -7251,6 +7251,7 @@ h1, h2, h3, h4, h5, h6, p {
 .sidenav__inner {
     width: 100%;
     min-height: 90%;
+    position: relative;
 }
 
 @media (max-width: 575.98px) {
@@ -7260,9 +7261,20 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.sidenav__beta {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #1E62D0;
+    font-size: 9px;
+    width: 100%;
+}
+
 .user__actions {
     margin: 30px auto;
-    width: 90%;
+    width: 80%;
     height: 30px;
     overflow: hidden;
     display: flex;
@@ -7291,7 +7303,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 70%;
     overflow: hidden;
     height: 100%;
-    border-radius: 10px 0 0 10px;
+    border-radius: 7.5px 0 0 7.5px;
     color: #000;
     text-decoration: none;
     color: #2B7BFB;
@@ -7310,13 +7322,14 @@ h1, h2, h3, h4, h5, h6, p {
 .user__settings {
     width: 30%;
     height: 100%;
-    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 7.5px 7.5px 0;
 }
 
 .user__settings img {
-    margin-top: 50%;
-    transform: translate(-5%, -55%);
-    height: 70%;
+    height: 75%;
 }
 
 .sidenav__options {
@@ -7449,7 +7462,7 @@ h1, h2, h3, h4, h5, h6, p {
     mask: url("../img/icons/sidebar/valorant-icon.svg");
 }
 
-.sidenav__option-inner.school {
+.sidenav__option-inner.sch {
     -webkit-mask: url("../img/icons/sidebar/school-icon.svg");
     mask: url("../img/icons/sidebar/school-icon.svg");
 }
@@ -7519,6 +7532,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 .ollo-logo {
     margin: 3%;
+    position: relative;
+}
+
+.ollo-logo:after {
+    content: "\03b2";
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    color: #fff;
+    font-size: 11px;
 }
 
 @media (max-width: 575.98px) {
@@ -7721,6 +7744,11 @@ h1, h2, h3, h4, h5, h6, p {
     -webkit-mask-size: auto 100% !important;
     mask-size: auto 100% !important;
     background: #173E7C;
+    text-align: center;
+}
+
+.footer__contact-img rect {
+    transition: fill .15s;
 }
 
 .footer__contact-img.vk {
@@ -7734,8 +7762,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer__contact-img.yt {
-    -webkit-mask: url("../img/icons/footer/yt-icon.svg");
-    mask: url("../img/icons/footer/yt-icon.svg");
+    background: none;
+}
+
+.footer__contact-img.yt svg {
+    transform: scale(1.2);
+    margin-bottom: 1px;
+}
+
+.footer__contact-img.yt:hover {
+    background: none;
+}
+
+.footer__contact-img.yt:hover rect {
+    fill: #112648;
 }
 
 .footer__contact-img.twitter {
@@ -7999,7 +8039,7 @@ h1, h2, h3, h4, h5, h6, p {
 .banner__slide-main-slide {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(43, 123, 251, 0.5) 100%), url("../img/util/csgo-bg.svg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(43, 123, 251, 0.5) 100%), url("../img/util/csgo-bg.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8127,6 +8167,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .matches__title:before {
@@ -8428,7 +8469,7 @@ h1, h2, h3, h4, h5, h6, p {
     color: #fff;
 }
 
-/* VK */
+/* TG */
 .tg__info {
     display: flex;
     justify-content: space-between;
@@ -8437,7 +8478,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 30px;
     width: 100%;
     height: 160px;
-    background: linear-gradient(180deg, #2B6CD4 0%, #2B7BFB 100%);
+    background: linear-gradient(0deg, #2B6CD4 0%, #2B7BFB 100%);
     z-index: 1;
     border-radius: 15px;
     cursor: pointer;
@@ -8460,7 +8501,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .tg__title {
     font-weight: 800;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.4;
     color: #fff;
 }
 
@@ -8472,7 +8514,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .tg__subtitle {
     font-weight: 700;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 12px;
     color: #fff;
 }
@@ -8608,6 +8650,10 @@ h1, h2, h3, h4, h5, h6, p {
     top: -40px;
 }
 
+.flat_button {
+    background-color: #2B7BFB;
+}
+
 .switcher {
     margin: 1rem 0;
     width: 100%;
@@ -8654,7 +8700,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 97%;
     margin: 0 auto;
     margin-top: 95px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     text-align: center;
     position: absolute;
@@ -8752,6 +8798,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .slideout__player-stats {
     text-align: right;
+    font-weight: 500;
 }
 
 .slideout__player-adr {
@@ -8957,6 +9004,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .media {
+    display: none;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -9132,27 +9180,27 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 10px 0;
 }
 
-.lives__main-wrapper:nth-child(even) .match__map, .main-wrapper:nth-child(even) .match__map {
+.lives__main-wrapper:nth-child(odd) .match__map, .main-wrapper:nth-child(odd) .match__map {
     background: linear-gradient(90deg, rgba(239, 243, 252, 0) 0%, #eff3fc 100%);
 }
 
-.lives__main-wrapper:nth-child(even) .map__img-wrapper, .main-wrapper:nth-child(even) .map__img-wrapper {
+.lives__main-wrapper:nth-child(odd) .map__img-wrapper, .main-wrapper:nth-child(odd) .map__img-wrapper {
     background: linear-gradient(90deg, #2B7BFB 0%, rgba(43, 123, 251, 0.6) 70%, rgba(239, 243, 252, 0) 100%);
 }
 
-.lives__main-wrapper:nth-child(even) .match__team-slideout-players, .main-wrapper:nth-child(even) .match__team-slideout-players {
-    background: #EFF3FC;
-}
-
-.lives__main-wrapper:nth-child(even) .media, .main-wrapper:nth-child(even) .media {
-    background: #fff;
-}
-
-.lives__main-wrapper:nth-child(odd), .main-wrapper:nth-child(odd) {
+.lives__main-wrapper:nth-child(odd) .match__team-slideout-players, .main-wrapper:nth-child(odd) .match__team-slideout-players {
     background: #EFF3FC;
 }
 
 .lives__main-wrapper:nth-child(odd) .media, .main-wrapper:nth-child(odd) .media {
+    background: #fff;
+}
+
+.lives__main-wrapper:nth-child(even), .main-wrapper:nth-child(even) {
+    background: #EFF3FC;
+}
+
+.lives__main-wrapper:nth-child(even) .media, .main-wrapper:nth-child(even) .media {
     background: #EFF3FC;
 }
 
@@ -9307,7 +9355,7 @@ h1, h2, h3, h4, h5, h6, p {
 .lives__team-score {
     font-weight: 500;
     font-size: 22px;
-    width: 7%;
+    width: 8%;
 }
 
 .lives__team-score.lead {
@@ -9334,7 +9382,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .lives__match-delim {
-    width: 10%;
+    width: 8%;
 }
 
 .lives__match-delim:before {
@@ -9356,6 +9404,12 @@ h1, h2, h3, h4, h5, h6, p {
     .lives__match-delim:before {
         font-size: 18px;
     }
+}
+
+.lives__match-timeleft {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1;
 }
 
 .lives__match-date {
@@ -9395,8 +9449,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    margin-right: 3px;
-    margin-bottom: 2px;
+    margin: 0 8px 2px 4px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -9561,7 +9614,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .school__choices-item {
-    padding: 4px 15px;
+    padding: 5px 0;
     background: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -11030,33 +11083,6 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 15px;
     cursor: pointer;
     transition: opacity .1s linear;
-}
-
-.mutual__main-wrapper, .main-wrapper {
-    margin: 5px auto;
-    width: 95%;
-    border-radius: 25px;
-    position: relative;
-}
-
-.mutual__main-wrapper .media, .main-wrapper .media {
-    width: 97%;
-}
-
-.mutual__main-wrapper:nth-child(even) .match__team-slideout-players, .mutual__main-wrapper:nth-child(even) .match__map, .main-wrapper:nth-child(even) .match__team-slideout-players, .main-wrapper:nth-child(even) .match__map {
-    background: #EFF3FC;
-}
-
-.mutual__main-wrapper:nth-child(even) .media, .main-wrapper:nth-child(even) .media {
-    background: #fff;
-}
-
-.mutual__main-wrapper:nth-child(odd), .main-wrapper:nth-child(odd) {
-    background: #EFF3FC;
-}
-
-.mutual__main-wrapper:nth-child(odd) .media, .main-wrapper:nth-child(odd) .media {
-    background: #EFF3FC;
 }
 
 .mutual__main-table {

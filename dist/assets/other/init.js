@@ -164,9 +164,20 @@
 		$('.lives__main-wrapper').each(function () {
 			let mInfo = $(this).find('.match__info');
 			mInfo.attr('data-height', mInfo.css('height'));
-			$(this).find('.media').animate({'margin-top': parseInt(mInfo.css('height')) + 30}, 300);
-			$(this).find('.media').css('margin-top', mInfo.css('height'));
+			// $(this).find('.media').animate({'margin-top': parseInt(mInfo.css('height')) + 30}, 300);
+			// $(this).find('.media').css('margin-top', mInfo.css('height'));
 		});
+
+		function openFirstWrap() {
+			let firstWrap = $('.lives__main-wrapper:first');
+			let mInfo = firstWrap.find('.match__info');
+			firstWrap.find('.media').animate({'margin-top': parseInt(mInfo.css('height')) + 30}, 300);
+			firstWrap.find('.media').css('margin-top', mInfo.css('height'));
+			mInfo.css('display', 'flex');
+			firstWrap.find('.media').css('display', 'block');
+		}
+
+		openFirstWrap();
 
 		$(".lives__main-tablerow td:not(.lives__extras)").click(function () {
 			let wrapper = $(this).parents('.lives__main-wrapper');
@@ -177,6 +188,16 @@
 				let curEl = this;
 				curEl.inAnimation = true;
 				if (mediaBlock.css('margin-top') === '0px') {
+					let openedMedia = $('.media').filter(function () { 
+					    return parseInt(this.style.marginTop) > 0 
+					});
+
+					openedMedia.animate({'margin-top': '0'}, 300);
+					openedMedia.slideUp(300);
+					setTimeout(function () {
+						openedMedia.parents('.lives__main-wrapper').find('.match__info').css('display', 'none');
+					}, 300);
+
 					wrapper.find('.media').slideToggle(300);
 					setTimeout(function () {
 						matchInfo.css('display', 'flex');
@@ -243,16 +264,18 @@
 			$(this).css('display', 'none');
 		});
 
-		$('.hide__button').click(function (e) {
+		$('.hide__button').not('.inline').click(function (e) {
 			e.preventDefault();
 			let curEl = $(this);
-			if (curEl.hasClass('inline')) {
-				parentEl = curEl.parent().parent();
-				minHeight = '50';
-			} else {
-				parentEl = curEl.parent();
-				minHeight = '50';
-			}
+			parentEl = curEl.parent();
+			minHeight = '50';
+			toggleSlide(curEl, parentEl, minHeight);
+		});
+
+		$('.hide__button.inline').parent().click(function (e) {
+			curEl = $(this).children('.hide__button');
+			parentEl = curEl.parent().parent();
+			minHeight = '50';
 			toggleSlide(curEl, parentEl, minHeight);
 		});
 
